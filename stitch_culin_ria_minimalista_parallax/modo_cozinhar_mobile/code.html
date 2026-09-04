@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CULINÁRIA - Cozinhar</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;700&amp;family=Manrope:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-highest": "#e5e2e1",
+                        "surface-container-low": "#f7f3f2",
+                        "primary-container": "#262626",
+                        "surface-container-lowest": "#ffffff",
+                        "inverse-surface": "#313030",
+                        "secondary-fixed-dim": "#c7c6c6",
+                        "on-background": "#1c1b1b",
+                        "outline-variant": "#c4c7c7",
+                        "on-tertiary-container": "#918d8b",
+                        "on-primary": "#ffffff",
+                        "on-primary-container": "#8e8d8c",
+                        "surface-tint": "#5f5e5e",
+                        "tertiary": "#131111",
+                        "surface-variant": "#e5e2e1",
+                        "on-error": "#ffffff",
+                        "surface-container": "#f1edec",
+                        "inverse-primary": "#c8c6c5",
+                        "on-primary-fixed-variant": "#474746",
+                        "on-secondary-fixed": "#1b1c1c",
+                        "on-primary-fixed": "#1b1c1c",
+                        "on-surface": "#1c1b1b",
+                        "background": "#fdf8f8",
+                        "on-tertiary-fixed-variant": "#494645",
+                        "tertiary-container": "#282625",
+                        "on-error-container": "#93000a",
+                        "on-surface-variant": "#444748",
+                        "outline": "#747878",
+                        "primary-fixed-dim": "#c8c6c5",
+                        "on-tertiary-fixed": "#1d1b1a",
+                        "on-secondary-fixed-variant": "#464747",
+                        "secondary": "#5e5e5e",
+                        "surface": "#fdf8f8",
+                        "primary-fixed": "#e4e2e1",
+                        "surface-dim": "#ddd9d8",
+                        "surface-bright": "#fdf8f8",
+                        "tertiary-fixed": "#e7e1df",
+                        "secondary-fixed": "#e3e2e2",
+                        "inverse-on-surface": "#f4f0ef",
+                        "on-secondary-container": "#646464",
+                        "tertiary-fixed-dim": "#cac5c4",
+                        "on-secondary": "#ffffff",
+                        "secondary-container": "#e3e2e2",
+                        "surface-container-high": "#ebe7e7",
+                        "error": "#ba1a1a",
+                        "primary": "#111111",
+                        "error-container": "#ffdad6",
+                        "on-tertiary": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "margin-desktop": "48px",
+                        "margin-mobile": "16px",
+                        "unit": "8px",
+                        "container-max": "1200px",
+                        "section-gap": "80px"
+                    },
+                    "fontFamily": {
+                        "label-caps": ["Manrope"],
+                        "body-lg": ["Manrope"],
+                        "headline-sm-mobile": ["EB Garamond"],
+                        "headline-lg": ["EB Garamond"],
+                        "display-lg": ["EB Garamond"],
+                        "body-md": ["Manrope"],
+                        "headline-xl": ["EB Garamond"]
+                    },
+                    "fontSize": {
+                        "label-caps": ["12px", { "lineHeight": "1.0", "letterSpacing": "0.15em", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-sm-mobile": ["24px", { "lineHeight": "1.3", "fontWeight": "500" }],
+                        "headline-lg": ["32px", { "lineHeight": "1.3", "fontWeight": "500" }],
+                        "display-lg": ["64px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-xl": ["48px", { "lineHeight": "1.2", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            background-image: url('https://lh3.googleusercontent.com/aida/AEtjO1WJ8fv3QB5XbGDi9OHwypivs7_S8Orsiy3QiPP9Dd21S14xDJyrQ5Vl3IdIK3eD1VwMtGaNkXPbCC1w4AH1120PevrXvRVvb7VvtWDnWm5IMT_z1xBAtjiRzExg6VBwakejx7NWxU53I3CywJ3qgNBrZK8nGJKqKb4Emp-q6eQeszqfkKBj56Zjg_ogwlmkj0le6RPVZb7rz9O0nVbwyftrJYgfRnkwpHlH7gKe_jPg-a-LDrsU9KyhktE');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        .glass-panel {
+            background: rgba(253, 248, 248, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(229, 226, 225, 0.5);
+        }
+        .hairline-border {
+            border: 1px solid #E5E5E5;
+        }
+        .hairline-border-bottom {
+            border-bottom: 1px solid #E5E5E5;
+        }
+        /* Custom Checkbox */
+        input[type="checkbox"] {
+            appearance: none;
+            background-color: transparent;
+            margin: 0;
+            font: inherit;
+            color: currentColor;
+            width: 1.15em;
+            height: 1.15em;
+            border: 1px solid #111111;
+            border-radius: 0;
+            display: grid;
+            place-content: center;
+        }
+        input[type="checkbox"]::before {
+            content: "";
+            width: 0.65em;
+            height: 0.65em;
+            transform: scale(0);
+            transition: 120ms transform ease-in-out;
+            box-shadow: inset 1em 1em #111111;
+            background-color: #111111;
+        }
+        input[type="checkbox"]:checked::before {
+            transform: scale(1);
+        }
+        .strikethrough-checked:has(input:checked) span.ing-text {
+            text-decoration: line-through;
+            color: #5e5e5e;
+        }
+    </style>
+</head>
+<body class="font-body-md text-on-surface antialiased min-h-screen flex flex-col">
+<!-- TopAppBar -->
+<header class="bg-surface/80 dark:bg-primary/80 backdrop-blur-md hidden md:flex justify-between items-center w-full px-margin-desktop max-w-container-max mx-auto h-20 border-b border-outline-variant dark:border-on-surface-variant fixed top-0 left-0 right-0 z-50">
+<div class="flex items-center hover:opacity-70 transition-opacity cursor-pointer text-primary dark:text-primary-fixed">
+<span class="material-symbols-outlined mr-4" style="font-variation-settings: 'FILL' 0;">menu</span>
+</div>
+<div class="font-headline-lg text-headline-lg tracking-widest text-primary dark:text-primary-fixed">
+            CULINÁRIA
+        </div>
+<div class="flex items-center space-x-8">
+<nav class="hidden md:flex space-x-6">
+<a class="font-label-caps text-label-caps text-secondary dark:text-secondary-fixed hover:text-primary dark:hover:text-primary-fixed transition-colors" href="#">RECEITAS</a>
+<a class="font-label-caps text-label-caps text-secondary dark:text-secondary-fixed hover:text-primary dark:hover:text-primary-fixed transition-colors" href="#">PLANEJADOR</a>
+<a class="font-label-caps text-label-caps text-secondary dark:text-secondary-fixed hover:text-primary dark:hover:text-primary-fixed transition-colors" href="#">LISTA</a>
+<a class="font-label-caps text-label-caps text-primary dark:text-primary-fixed border-b-2 border-primary dark:border-primary-fixed pb-1" href="#">COZINHAR</a>
+</nav>
+<div class="flex items-center hover:opacity-70 transition-opacity cursor-pointer text-primary dark:text-primary-fixed">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">search</span>
+</div>
+</div>
+</header>
+<!-- Main Content Area - Step-by-Step Cooking Mode -->
+<main class="flex-grow flex items-center justify-center pt-24 pb-24 md:pt-32 md:pb-16 px-margin-mobile md:px-margin-desktop">
+<div class="w-full max-w-3xl glass-panel p-6 md:p-12 shadow-2xl relative">
+<!-- Progress Indicator -->
+<div class="absolute top-0 left-0 w-full h-1 bg-surface-container-high">
+<div class="h-full bg-primary w-1/3 transition-all duration-500 ease-in-out"></div>
+</div>
+<!-- Step Header -->
+<div class="flex justify-between items-start mb-8">
+<div>
+<span class="font-label-caps text-label-caps text-secondary uppercase tracking-widest mb-2 block">Passo 2 de 6</span>
+<h1 class="font-headline-xl text-headline-xl text-primary md:hidden">Preparar a base</h1>
+<h1 class="font-display-lg text-display-lg text-primary hidden md:block">Preparar a base</h1>
+</div>
+<!-- Audio Controls -->
+<button class="w-12 h-12 flex items-center justify-center rounded-full hairline-border hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">volume_up</span>
+</button>
+</div>
+<!-- Instruction Text -->
+<p class="font-body-lg text-body-lg text-on-surface mb-10 leading-relaxed">
+                Aqueça o azeite em uma panela grande em fogo médio. Adicione a cebola picada e o alho e refogue até ficarem translúcidos e perfumados, cerca de 5 minutos. Evite dourar para manter o sabor suave.
+            </p>
+<!-- Ingredients Checklist -->
+<div class="mb-10">
+<h3 class="font-label-caps text-label-caps text-secondary mb-4 uppercase">Ingredientes necessários</h3>
+<ul class="space-y-0">
+<li class="strikethrough-checked py-3 hairline-border-bottom flex items-center gap-4">
+<input class="cursor-pointer" id="ing1" type="checkbox"/>
+<label class="cursor-pointer flex-grow" for="ing1">
+<span class="ing-text font-body-md text-body-md text-on-surface transition-colors">2 colheres de sopa de azeite extravirgem</span>
+</label>
+</li>
+<li class="strikethrough-checked py-3 hairline-border-bottom flex items-center gap-4">
+<input class="cursor-pointer" id="ing2" type="checkbox"/>
+<label class="cursor-pointer flex-grow" for="ing2">
+<span class="ing-text font-body-md text-body-md text-on-surface transition-colors">1 cebola média, finamente picada</span>
+</label>
+</li>
+<li class="strikethrough-checked py-3 flex items-center gap-4">
+<input class="cursor-pointer" id="ing3" type="checkbox"/>
+<label class="cursor-pointer flex-grow" for="ing3">
+<span class="ing-text font-body-md text-body-md text-on-surface transition-colors">3 dentes de alho, esmagados</span>
+</label>
+</li>
+</ul>
+</div>
+<!-- Timer & Actions -->
+<div class="flex flex-col sm:flex-row items-center justify-between gap-6 pt-6 hairline-border-t">
+<!-- Timer -->
+<div class="flex items-center gap-4 bg-surface-container-low p-4 hairline-border w-full sm:w-auto">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 0;">timer</span>
+<span class="font-headline-lg text-headline-lg text-primary tabular-nums tracking-wider">05:00</span>
+<button class="ml-4 font-label-caps text-label-caps text-primary hover:text-secondary transition-colors uppercase">Iniciar</button>
+</div>
+<!-- Navigation Buttons -->
+<div class="flex gap-4 w-full sm:w-auto">
+<button class="flex-1 sm:flex-none px-6 py-4 hairline-border text-primary hover:bg-surface-container transition-colors flex items-center justify-center">
+<span class="material-symbols-outlined mr-2" style="font-variation-settings: 'FILL' 0;">arrow_back</span>
+<span class="font-label-caps text-label-caps uppercase">Anterior</span>
+</button>
+<button class="flex-1 sm:flex-none px-8 py-4 bg-primary text-on-primary hover:bg-inverse-surface transition-colors flex items-center justify-center">
+<span class="font-label-caps text-label-caps uppercase">Próximo</span>
+<span class="material-symbols-outlined ml-2" style="font-variation-settings: 'FILL' 0;">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="md:hidden flex justify-around items-center h-16 px-4 pb-safe bg-surface/90 dark:bg-primary/90 backdrop-blur-lg fixed bottom-0 w-full z-50 border-t border-outline-variant dark:border-on-surface-variant">
+<a class="flex flex-col items-center justify-center text-secondary dark:text-secondary-fixed opacity-60 hover:opacity-100 transition-opacity group" href="#">
+<span class="material-symbols-outlined mb-1 group-active:scale-95 transition-transform" style="font-variation-settings: 'FILL' 0;">restaurant_menu</span>
+<span class="font-label-caps text-[10px] tracking-wider font-semibold">RECEITAS</span>
+</a>
+<a class="flex flex-col items-center justify-center text-secondary dark:text-secondary-fixed opacity-60 hover:opacity-100 transition-opacity group" href="#">
+<span class="material-symbols-outlined mb-1 group-active:scale-95 transition-transform" style="font-variation-settings: 'FILL' 0;">calendar_today</span>
+<span class="font-label-caps text-[10px] tracking-wider font-semibold">PLANEJADOR</span>
+</a>
+<a class="flex flex-col items-center justify-center text-secondary dark:text-secondary-fixed opacity-60 hover:opacity-100 transition-opacity group" href="#">
+<span class="material-symbols-outlined mb-1 group-active:scale-95 transition-transform" style="font-variation-settings: 'FILL' 0;">format_list_bulleted</span>
+<span class="font-label-caps text-[10px] tracking-wider font-semibold">LISTA</span>
+</a>
+<a class="flex flex-col items-center justify-center text-primary dark:text-primary-fixed font-semibold scale-110 hover:opacity-100 transition-opacity translate-y-[-2px]" href="#">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 1;">skillet</span>
+<span class="font-label-caps text-[10px] tracking-wider font-bold">COZINHAR</span>
+</a>
+</nav>
+</body></html>

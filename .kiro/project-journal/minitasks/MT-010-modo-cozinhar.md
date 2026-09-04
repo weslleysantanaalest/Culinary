@@ -1,0 +1,36 @@
+# MT-010 — Implementar tela Modo Cozinhar
+
+- **Status**: concluída
+- **Data/hora**: 2026-08-27 14:20 -03:00
+- **Objetivo**: Implementar o modo passo-a-passo de uma receita (RF-040 a RF-047), fiel ao protótipo `modo_cozinhar_desktop`, com checklist de ingredientes por passo (ADR-003), timer, navegação e progresso.
+- **Contexto**: Última das 4 telas centrais do escopo original. Tipos `PassoDeReceita` já modelados com ingredientes próprios por passo desde MT-006.
+- **Arquivos criados**:
+  - `src/components/modo-cozinhar.tsx` — client component com estado (`useState` para índice do passo atual e `Set` de ingredientes marcados): indicador "PASSO X DE Y", barra de progresso proporcional, texto de instrução, checklist do passo atual (checkbox + strikethrough ao marcar), timer do passo (quando `tempoEstimadoMinutos` definido), botões Anterior/Próximo (desabilitados nos extremos), indicadores de progresso em barras.
+  - `src/components/modo-cozinhar.test.tsx` — 7 testes (passo inicial correto, botão Anterior desabilitado no passo 1, avançar/voltar entre passos, botão Próximo desabilitado no último passo, marcar ingrediente via checkbox, ausência de seção de ingredientes quando o passo não tem nenhum).
+  - `src/app/cozinhar/page.tsx` — página índice: grid de receitas disponíveis para iniciar o modo cozinhar, cada uma linkando para `/cozinhar/[id]`.
+  - `src/app/cozinhar/[id]/page.tsx` — rota dinâmica: resolve a receita pelo `id`, chama `notFound()` (404) se inexistente, renderiza `ModoCozinhar`.
+  - `src/app/receitas/[id]/page.tsx` — página de detalhe de receita (dependência pendente desde MT-007/MT-009: os links de `RecipeCard` e `BuscaIngredientes` apontavam para esta rota, que ainda não existia). Exibe categorias, tempo/dificuldade, imagem, lista de ingredientes completa e botão "INICIAR MODO COZINHAR" linkando para `/cozinhar/[id]`.
+- **Arquivos alterados**: nenhum arquivo pré-existente.
+- **Implementação realizada**: componente `ModoCozinhar` testado isoladamente (7 casos de interação real) antes de integrar às páginas. Resolvida a pendência de rota de detalhe registrada em duas minitasks anteriores, fechando o ciclo de navegação completo (Receitas → detalhe → Modo Cozinhar; Lista de Ingredientes → detalhe → Modo Cozinhar).
+- **Decisões técnicas**:
+  - Checklist de ingredientes é por passo (`passoAtual.ingredientes`), não da receita completa — implementa ADR-003 diretamente, consistente com a decisão já tomada em MT-002/MT-006.
+  - `notFound()` do Next.js usado para 404 real (não uma mensagem de erro genérica) quando o `id` da receita não existe — comportamento HTTP correto, verificável.
+  - Página `/cozinhar` (índice) criada como decisão de UX necessária: o protótipo original assumia entrar direto em uma receita específica, mas sem essa página intermediária o item de nav "COZINHAR" não teria destino sem um `id` pré-selecionado.
+- **Comandos executados**:
+  - `npx vitest run src/components/modo-cozinhar.test.tsx` → 7 passed (validação isolada).
+  - `npm run lint` → exit 0, sem findings.
+  - `npm test` → 36 passed (6 test files, incremento de 29 para 36).
+  - `npm run build` → exit 0, 7 rotas geradas (5 estáticas: `/`, `/_not-found`, `/cozinhar`, `/lista`, `/planejador`; 2 dinâmicas server-rendered: `/cozinhar/[id]`, `/receitas/[id]`).
+  - `nohup npm run dev &` + `curl` em 4 cenários:
+    - `/cozinhar` → HTTP 200, "Modo Cozinhar" presente.
+    - `/cozinhar/massa-fresca-classica` → HTTP 200, título da receita presente, "PASSO...1...DE...3" confirmado (interpolado com comentários React entre valores, comportamento normal de hidratação).
+    - `/cozinhar/id-que-nao-existe` → HTTP 404 (confirma `notFound()` funcionando corretamente).
+    - `/receitas/massa-fresca-classica` → HTTP 200, botão "INICIAR MODO COZINHAR" presente.
+- **Testes executados**: `src/components/modo-cozinhar.test.tsx` (7 casos).
+- **Resultado**: sucesso.
+- **Evidências**: outputs de lint/test/build citados acima; 4 cenários de HTTP confirmados via curl, incluindo o caso negativo (404).
+- **Pendências**:
+  - Funcionalidade de timer real (contagem regressiva ao clicar "Iniciar") não implementada — botão presente visualmente (RF-043) mas sem lógica de `setInterval`/estado de contagem. Registrado como lacuna consciente, não requisito confirmado com detalhamento suficiente nos protótipos para implementar com segurança nesta fase.
+  - Botão "Ouvir Passo" (RF-044, text-to-speech) presente visualmente mas sem integração com Web Speech API — mesma razão acima.
+  - Visão mobile do Modo Cozinhar (painel único centralizado, checklist já por passo conforme protótipo mobile) não implementada nesta minitask — fidelidade desktop primeiro, mesmo padrão das MT-008/MT-009.
+- **Próxima minitask**: MT-011 — Rodar lint, build e testes finais; registrar evidências (última minitask do backlog original).

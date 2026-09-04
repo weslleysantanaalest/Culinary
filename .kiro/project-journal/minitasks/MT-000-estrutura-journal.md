@@ -1,0 +1,24 @@
+# MT-000 — Criar estrutura .kiro/project-journal/
+
+- **Status**: concluída
+- **Data/hora**: 2026-08-27 11:19 -03:00
+- **Objetivo**: Criar a estrutura de journal local que substitui o Notion enquanto o MCP não está disponível, preparada para futura sincronização como subpáginas.
+- **Contexto**: Notion MCP indisponível nesta sessão (nenhuma tool de Notion presente). Protocolo autoriza fallback local em `.kiro/project-journal/`.
+- **Arquivos analisados**: nenhum (estrutura nova).
+- **Arquivos criados**:
+  - `.kiro/project-journal/00-estado-atual.md`
+  - `.kiro/project-journal/01-requisitos.md` (placeholder)
+  - `.kiro/project-journal/02-arquitetura.md` (placeholder)
+  - `.kiro/project-journal/03-backlog.md`
+  - `.kiro/project-journal/04-evidencias.md` (placeholder)
+  - `.kiro/project-journal/05-bloqueios.md`
+  - `.kiro/project-journal/minitasks/MT-000-estrutura-journal.md` (este arquivo)
+- **Arquivos alterados**: nenhum.
+- **Implementação realizada**: criação dos 6 arquivos fixos definidos no protocolo (00 a 05) e da pasta `minitasks/`.
+- **Decisões técnicas**: nomes de arquivo em kebab-case numerado (`00-`, `01-`, ...) para ordenação natural no filesystem e mapeamento 1:1 com as subpáginas fixas planejadas para o Notion.
+- **Comandos executados**: nenhum comando de shell; apenas criação de arquivos via ferramenta de escrita.
+- **Testes executados**: N/A (criação de documentação).
+- **Resultado**: sucesso.
+- **Evidências**: confirmação de escrita de cada um dos 6 arquivos (ver saída da ferramenta `write`, todas com status "Successfully created").
+- **Pendências**: nenhuma para esta minitask.
+- **Próxima minitask**: MT-001 — Inventariar protótipos HTML/CSS existentes.

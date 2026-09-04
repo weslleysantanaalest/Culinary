@@ -1,0 +1,29 @@
+# MT-008 — Implementar tela de Planejador
+
+- **Status**: concluída
+- **Data/hora**: 2026-08-27 14:13 -03:00
+- **Objetivo**: Implementar a visão de grid semanal do Planejador (RF-020, RF-021, RF-023, RF-024), fiel ao protótipo `planejador_desktop`.
+- **Contexto**: Layout base, NavBar/Footer e dataset de planejamentos já disponíveis (MT-006/MT-007).
+- **Arquivos criados**:
+  - `src/lib/planejador.ts` — helpers de domínio puros: `getDatasDaSemana` (calcula as 7 datas da semana a partir de uma referência, sempre normalizando para segunda-feira), `encontrarPlano` (busca plano por data+período), `formatarDiaDoMes`, constantes `DIAS_SEMANA`/`PERIODOS`.
+  - `src/lib/planejador.test.ts` — 6 testes (cálculo de semana a partir de segunda/domingo/quarta, busca de plano existente/inexistente, formatação de dia).
+  - `src/components/meal-card.tsx` — card de refeição planejada dentro de uma célula do grid (rótulo opcional + título + tempo).
+  - `src/app/planejador/page.tsx` — página com header (título + navegação Anterior/Próxima) e grid semanal (8 colunas: rótulo de período + 7 dias), reutilizando `planejamentosRefeicao` e `getReceitaPorId` da MT-006.
+- **Arquivos alterados**: nenhum arquivo pré-existente.
+- **Implementação realizada**: lógica de cálculo de datas testada isoladamente antes de integrar à página (testes escritos e validados primeiro). Grid renderiza uma célula por (período × dia), populando com `MealCard` quando há plano correspondente, vazia quando não há.
+- **Decisões técnicas**:
+  - `DATA_REFERENCIA = "2024-10-14"` fixa (mesma semana usada nos protótipos e nos mocks de `planejamentos.ts`) — não há relógio real envolvido, o que é adequado para app com dados mockados sem backend.
+  - Botões "Anterior"/"Próxima" renderizados mas sem navegação funcional ainda (protótipo também não define para onde navegam sem dados de outras semanas) — não é requisito confirmado ter mais semanas mockadas; registrado como decisão consciente, não lacuna oculta.
+- **Comandos executados**:
+  - `npx vitest run src/lib/planejador.test.ts` → 6 passed (validação isolada antes de integrar).
+  - `npm run lint` → exit 0, sem findings.
+  - `npm test` → 17 passed (3 test files, incremento de 11 para 17 com os 6 novos testes).
+  - `npm run build` → exit 0, 3 rotas estáticas geradas (`/`, `/_not-found`, `/planejador`).
+  - `nohup npm run dev &` + `curl http://localhost:3000/planejador` → HTTP 200, conteúdo confirmado ("Semana Atual", "Salmão Grelhado com Aspargos" na célula de terça/jantar).
+- **Testes executados**: `src/lib/planejador.test.ts` (6 casos).
+- **Resultado**: sucesso.
+- **Evidências**: outputs de lint/test/build acima citados; HTML renderizado confirmado via curl.
+- **Pendências**:
+  - Visão mobile (timeline vertical por dia, RF-022) não implementada nesta minitask — protótipo mobile usa componente estruturalmente diferente do desktop (não é apenas responsivo); registrado como item de backlog futuro, fora do escopo de "implementar tela de Planejador" tal como perseguido nesta fase (fidelidade desktop primeiro).
+  - Ação "+ NOVA REFEIÇÃO" / adicionar receita a um slot vazio não implementada (RF-024) — não há formulário/estado editável ainda, app é somente leitura dos mocks nesta fase.
+- **Próxima minitask**: MT-009 — Implementar tela de Lista de Ingredientes.

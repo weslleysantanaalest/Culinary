@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+
+<html class="light" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Meal Planner - CULINÁRIA</title>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Config -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-highest": "#e5e2e1",
+                        "surface-container-low": "#f7f3f2",
+                        "primary-container": "#262626",
+                        "surface-container-lowest": "#ffffff",
+                        "inverse-surface": "#313030",
+                        "secondary-fixed-dim": "#c7c6c6",
+                        "on-background": "#1c1b1b",
+                        "outline-variant": "#c4c7c7",
+                        "on-tertiary-container": "#918d8b",
+                        "on-primary": "#ffffff",
+                        "on-primary-container": "#8e8d8c",
+                        "surface-tint": "#5f5e5e",
+                        "tertiary": "#131111",
+                        "surface-variant": "#e5e2e1",
+                        "on-error": "#ffffff",
+                        "surface-container": "#f1edec",
+                        "inverse-primary": "#c8c6c5",
+                        "on-primary-fixed-variant": "#474746",
+                        "on-secondary-fixed": "#1b1c1c",
+                        "on-primary-fixed": "#1b1c1c",
+                        "on-surface": "#1c1b1b",
+                        "background": "#fdf8f8",
+                        "on-tertiary-fixed-variant": "#494645",
+                        "tertiary-container": "#282625",
+                        "on-error-container": "#93000a",
+                        "on-surface-variant": "#444748",
+                        "outline": "#747878",
+                        "primary-fixed-dim": "#c8c6c5",
+                        "on-tertiary-fixed": "#1d1b1a",
+                        "on-secondary-fixed-variant": "#464747",
+                        "secondary": "#5e5e5e",
+                        "surface": "#fdf8f8",
+                        "primary-fixed": "#e4e2e1",
+                        "surface-dim": "#ddd9d8",
+                        "surface-bright": "#fdf8f8",
+                        "tertiary-fixed": "#e7e1df",
+                        "secondary-fixed": "#e3e2e2",
+                        "inverse-on-surface": "#f4f0ef",
+                        "on-secondary-container": "#646464",
+                        "tertiary-fixed-dim": "#cac5c4",
+                        "on-secondary": "#ffffff",
+                        "secondary-container": "#e3e2e2",
+                        "surface-container-high": "#ebe7e7",
+                        "error": "#ba1a1a",
+                        "primary": "#111111",
+                        "error-container": "#ffdad6",
+                        "on-tertiary": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "margin-desktop": "48px",
+                        "margin-mobile": "16px",
+                        "unit": "8px",
+                        "container-max": "1200px",
+                        "section-gap": "80px"
+                    },
+                    "fontFamily": {
+                        "label-caps": ["Manrope", "sans-serif"],
+                        "body-lg": ["Manrope", "sans-serif"],
+                        "headline-sm-mobile": ["EB Garamond", "serif"],
+                        "headline-lg": ["EB Garamond", "serif"],
+                        "display-lg": ["EB Garamond", "serif"],
+                        "body-md": ["Manrope", "sans-serif"],
+                        "headline-xl": ["EB Garamond", "serif"]
+                    },
+                    "fontSize": {
+                        "label-caps": ["12px", { "lineHeight": "1.0", "letterSpacing": "0.15em", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-sm-mobile": ["24px", { "lineHeight": "1.3", "fontWeight": "500" }],
+                        "headline-lg": ["32px", { "lineHeight": "1.3", "fontWeight": "500" }],
+                        "display-lg": ["64px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-xl": ["48px", { "lineHeight": "1.2", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&amp;family=Manrope:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen relative overflow-x-hidden">
+<!-- Background Image with Overlay -->
+<div class="fixed inset-0 w-full h-full bg-cover bg-center z-[-2]" style="background-image: url('https://lh3.googleusercontent.com/aida/AEtjO1WJ8fv3QB5XbGDi9OHwypivs7_S8Orsiy3QiPP9Dd21S14xDJyrQ5Vl3IdIK3eD1VwMtGaNkXPbCC1w4AH1120PevrXvRVvb7VvtWDnWm5IMT_z1xBAtjiRzExg6VBwakejx7NWxU53I3CywJ3qgNBrZK8nGJKqKb4Emp-q6eQeszqfkKBj56Zjg_ogwlmkj0le6RPVZb7rz9O0nVbwyftrJYgfRnkwpHlH7gKe_jPg-a-LDrsU9KyhktE')"></div>
+<div class="fixed inset-0 w-full h-full bg-surface/85 backdrop-blur-md z-[-1]"></div>
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-40 bg-surface/80 dark:bg-primary/80 backdrop-blur-md border-b border-outline-variant dark:border-on-surface-variant transition-all duration-300">
+<div class="hidden md:flex justify-between items-center w-full px-margin-desktop max-w-container-max mx-auto h-20">
+<!-- Leading Icon -->
+<button class="p-2 text-primary dark:text-primary-fixed hover:opacity-70 transition-opacity flex items-center justify-center">
+<span class="material-symbols-outlined text-[24px]">menu</span>
+</button>
+<!-- Headline / Brand -->
+<h1 class="font-headline-lg text-headline-lg tracking-widest text-primary dark:text-primary-fixed">CULINÁRIA</h1>
+<!-- Trailing Icon -->
+<button class="p-2 text-primary dark:text-primary-fixed hover:opacity-70 transition-opacity flex items-center justify-center">
+<span class="material-symbols-outlined text-[24px]">search</span>
+</button>
+</div>
+<!-- Mobile Top Nav (Simplified for visual consistency if needed, though JSON implies hidden on md) -->
+<div class="md:hidden flex justify-between items-center w-full px-margin-mobile h-16">
+<button class="p-2 text-primary hover:opacity-70 transition-opacity">
+<span class="material-symbols-outlined text-[24px]">menu</span>
+</button>
+<h1 class="font-headline-sm-mobile text-headline-sm-mobile tracking-widest text-primary">CULINÁRIA</h1>
+<button class="p-2 text-primary hover:opacity-70 transition-opacity">
+<span class="material-symbols-outlined text-[24px]">search</span>
+</button>
+</div>
+</header>
+<!-- Main Content: Meal Planner -->
+<main class="w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop pt-24 md:pt-32 pb-32 md:pb-24">
+<!-- Page Header -->
+<div class="mb-gutter md:mb-section-gap flex justify-between items-end border-b border-surface-variant pb-unit">
+<div>
+<h2 class="font-display-lg text-display-lg text-primary hidden md:block">Agenda Semanal</h2>
+<h2 class="font-headline-lg text-headline-lg text-primary md:hidden">Agenda Semanal</h2>
+<p class="font-body-md text-body-md text-secondary mt-2">12 Nov - 18 Nov</p>
+</div>
+<button class="flex items-center gap-2 border border-primary-container px-4 py-2 hover:bg-surface-container transition-colors rounded-none">
+<span class="material-symbols-outlined text-[18px]">add</span>
+<span class="font-label-caps text-label-caps text-primary">NOVA REFEIÇÃO</span>
+</button>
+</div>
+<!-- Agenda View -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Day Column (Repeated for structure) -->
+<div class="md:col-span-8 md:col-start-3 space-y-section-gap">
+<!-- Single Day Block -->
+<div class="relative">
+<!-- Day Header -->
+<div class="sticky top-20 md:top-24 z-10 bg-surface/90 backdrop-blur-sm py-4 border-b border-outline-variant mb-6">
+<h3 class="font-headline-lg text-headline-lg text-primary">Segunda-feira</h3>
+<span class="font-label-caps text-label-caps text-secondary block mt-1">12 DE NOVEMBRO</span>
+</div>
+<!-- Time Slots Container -->
+<div class="space-y-0 border-l border-surface-variant ml-2 md:ml-4 pl-4 md:pl-8">
+<!-- Slot 1: Breakfast -->
+<div class="relative group pb-8">
+<!-- Timeline Dot -->
+<div class="absolute -left-[21px] md:-left-[37px] top-1 w-2 h-2 bg-primary rounded-full ring-4 ring-surface"></div>
+<div class="flex flex-col md:flex-row md:items-start gap-4">
+<div class="w-24 shrink-0 pt-1">
+<span class="font-label-caps text-label-caps text-secondary">08:00</span>
+</div>
+<div class="flex-1 bg-surface-container-lowest border border-surface-variant p-4 hover:shadow-sm transition-shadow">
+<div class="flex justify-between items-start gap-4">
+<div>
+<span class="font-label-caps text-label-caps text-on-surface-variant mb-2 block">CAFÉ DA MANHÃ</span>
+<h4 class="font-body-lg text-body-lg text-primary">Pão de Levain com Abacate e Ovo Poché</h4>
+<div class="flex items-center gap-4 mt-4">
+<div class="flex items-center gap-1 text-secondary">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+<span class="font-label-caps text-label-caps">15 MIN</span>
+</div>
+</div>
+</div>
+<!-- Thumbnail -->
+<div class="w-20 h-20 bg-surface-variant shrink-0 border border-surface-variant overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A minimalist overhead shot of artisanal sourdough toast topped with sliced avocado and a perfectly poached egg, placed on a matte white ceramic plate, resting on a clean light concrete surface. Bright natural morning light, high-key photography, elegant and simple food styling." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBm9Cpnlc8ZTnExzOyEswUwYljX5yYAXIEnILJIFw-la0nV9BT_8BhcFox7T5vanMtTBmxIlZuSpWygyoCzEp-F1T0NuW8zSf4MrqsEWjemv5DryOv-TV55khSMaPRS4-e976sy9ywGW6TJDOtywDbbN0nt3mwCwtDeP60gijtzsSG5XCGzBg2UEFGpVaYoa3Q99AfNnnxbufAka-ApJyR0GxPSkeZCYf5X_fsGus03kdnZ9lFpMEkE"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Slot 2: Lunch -->
+<div class="relative group pb-8">
+<div class="absolute -left-[21px] md:-left-[37px] top-1 w-2 h-2 bg-outline rounded-full ring-4 ring-surface"></div>
+<div class="flex flex-col md:flex-row md:items-start gap-4">
+<div class="w-24 shrink-0 pt-1">
+<span class="font-label-caps text-label-caps text-secondary">13:00</span>
+</div>
+<div class="flex-1 bg-surface-container-lowest border border-surface-variant p-4 hover:shadow-sm transition-shadow">
+<div class="flex justify-between items-start gap-4">
+<div>
+<span class="font-label-caps text-label-caps text-on-surface-variant mb-2 block">ALMOÇO</span>
+<h4 class="font-body-lg text-body-lg text-primary">Salada de Quinoa com Vegetais Assados e Molho de Tahine</h4>
+<div class="flex items-center gap-4 mt-4">
+<div class="flex items-center gap-1 text-secondary">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+<span class="font-label-caps text-label-caps">40 MIN</span>
+</div>
+</div>
+</div>
+<div class="w-20 h-20 bg-surface-variant shrink-0 border border-surface-variant overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A sophisticated bowl of fluffy quinoa mixed with vibrant roasted root vegetables like carrots and beets, drizzled with a creamy light tahini dressing. The dish is presented in an earthy, unglazed ceramic bowl on a minimalist wooden table. Natural, soft diffused lighting, emphasizing the textures of the ingredients." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3T2lKZ_5YxsfVFchV6pkaTqBxdjLfBkqMiSwJ1nqnWRdZPgGg4bY_MxN07A6iTctVbfk909gi6U16BY97N5r3Hgo3-QSoFCLiu4xKx1u6dpFbsoF-cS04H-QHLxYwbKQ6rGmHWKc5iEgPgl92hklaa82okkoz7N9KKsUVQXZRIV20ZTrgu-OhY9iTF8JQSSGPc2lM6rAL0NENL5HVg9Eif8Yr09Sw5s_VDGoKZt6WnjP6FT39Bi0-"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Slot 3: Dinner (Empty Slot Example) -->
+<div class="relative group pb-4">
+<div class="absolute -left-[21px] md:-left-[37px] top-1 w-2 h-2 bg-surface-variant rounded-full ring-4 ring-surface"></div>
+<div class="flex flex-col md:flex-row md:items-start gap-4 opacity-60 hover:opacity-100 transition-opacity">
+<div class="w-24 shrink-0 pt-1">
+<span class="font-label-caps text-label-caps text-secondary">20:00</span>
+</div>
+<button class="flex-1 border border-dashed border-outline-variant p-4 text-left hover:bg-surface-container-low transition-colors group-hover:border-primary">
+<span class="font-label-caps text-label-caps text-on-surface-variant block mb-1">JANTAR</span>
+<span class="font-body-md text-body-md text-secondary flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">add_circle</span>
+                                        Adicionar Receita
+                                    </span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Another Day Block -->
+<div class="relative">
+<div class="sticky top-20 md:top-24 z-10 bg-surface/90 backdrop-blur-sm py-4 border-b border-outline-variant mb-6">
+<h3 class="font-headline-lg text-headline-lg text-primary">Terça-feira</h3>
+<span class="font-label-caps text-label-caps text-secondary block mt-1">13 DE NOVEMBRO</span>
+</div>
+<div class="space-y-0 border-l border-surface-variant ml-2 md:ml-4 pl-4 md:pl-8">
+<div class="relative group pb-4">
+<div class="absolute -left-[21px] md:-left-[37px] top-1 w-2 h-2 bg-primary rounded-full ring-4 ring-surface"></div>
+<div class="flex flex-col md:flex-row md:items-start gap-4">
+<div class="w-24 shrink-0 pt-1">
+<span class="font-label-caps text-label-caps text-secondary">19:30</span>
+</div>
+<div class="flex-1 bg-surface-container-lowest border border-surface-variant p-4 hover:shadow-sm transition-shadow">
+<div class="flex justify-between items-start gap-4">
+<div>
+<span class="font-label-caps text-label-caps text-on-surface-variant mb-2 block">JANTAR</span>
+<h4 class="font-body-lg text-body-lg text-primary">Risoto de Cogumelos Selvagens com Trufa</h4>
+<div class="flex items-center gap-4 mt-4">
+<div class="flex items-center gap-1 text-secondary">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+<span class="font-label-caps text-label-caps">50 MIN</span>
+</div>
+</div>
+</div>
+<div class="w-20 h-20 bg-surface-variant shrink-0 border border-surface-variant overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A luxurious plate of creamy wild mushroom risotto, garnished with fresh herbs and delicate shavings of black truffle. The dish is centered on a wide, shallow white bowl, sitting on a dark, matte slate surface to create a high-end, moody culinary magazine aesthetic. Warm, directional lighting highlighting the creamy texture." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_PegY4vuejZQRAssHsJ7XjaWI7_cLphJsgwlDAeNxNjKl4S2L_SAEcSPwb3LyBdSav0VmvN9fvBMQ8f5LqWn4BdQ6oRnebVd_rgL4ycxd9rfW4y5cgIlYI_iWXfpcrdE8FnOmzOyoUmlX4nTaOUgRxUVp8Av_64mO1kiKoERKP1Lr4xdrQ1xGsBZnqkKVpJNB7uSGm--zo0a4oRFvVue_qzJYo-v6kV1fN9VrHOCnVZ1BYpTo1zul"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="md:hidden flex justify-around items-center h-16 px-4 pb-safe bg-surface/90 dark:bg-primary/90 backdrop-blur-lg fixed bottom-0 w-full z-50 border-t border-outline-variant dark:border-on-surface-variant">
+<!-- Tab 1: RECEITAS (Inactive) -->
+<a class="flex flex-col items-center justify-center text-secondary dark:text-secondary-fixed opacity-60 hover:opacity-100 transition-opacity" href="#">
+<span class="material-symbols-outlined mb-1">restaurant_menu</span>
+<span class="font-label-caps text-label-caps">RECEITAS</span>
+</a>
+<!-- Tab 2: PLANEJADOR (Active) -->
+<a class="flex flex-col items-center justify-center text-primary dark:text-primary-fixed font-semibold scale-110 Active: translate-y-[-2px] transition-transform" href="#">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 1;">calendar_today</span>
+<span class="font-label-caps text-label-caps">PLANEJADOR</span>
+</a>
+<!-- Tab 3: LISTA (Inactive) -->
+<a class="flex flex-col items-center justify-center text-secondary dark:text-secondary-fixed opacity-60 hover:opacity-100 transition-opacity" href="#">
+<span class="material-symbols-outlined mb-1">format_list_bulleted</span>
+<span class="font-label-caps text-label-caps">LISTA</span>
+</a>
+<!-- Tab 4: COZINHAR (Inactive) -->
+<a class="flex flex-col items-center justify-center text-secondary dark:text-secondary-fixed opacity-60 hover:opacity-100 transition-opacity" href="#">
+<span class="material-symbols-outlined mb-1">skillet</span>
+<span class="font-label-caps text-label-caps">COZINHAR</span>
+</a>
+</nav>
+</body></html>

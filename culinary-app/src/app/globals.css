@@ -1,0 +1,120 @@
+@import "tailwindcss";
+@import "material-symbols/outlined.css";
+
+/*
+ * Design tokens portados de stitch_culin_ria_minimalista_parallax/digital_culinary_atelier/DESIGN.md
+ * e dos protótipos code.html (config Tailwind v3 inline), para Tailwind v4 (@theme).
+ * Ver .kiro/project-journal/02-arquitetura.md para o histórico da decisão.
+ */
+:root {
+  --color-background: #fdf8f8;
+  --color-surface: #fdf8f8;
+  --color-surface-dim: #ddd9d8;
+  --color-surface-bright: #fdf8f8;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #f7f3f2;
+  --color-surface-container: #f1edec;
+  --color-surface-container-high: #ebe7e7;
+  --color-surface-container-highest: #e5e2e1;
+  --color-surface-variant: #e5e2e1;
+
+  --color-on-background: #1c1b1b;
+  --color-on-surface: #1c1b1b;
+  --color-on-surface-variant: #444748;
+
+  --color-outline: #747878;
+  --color-outline-variant: #c4c7c7;
+
+  --color-primary: #262626;
+  --color-on-primary: #ffffff;
+  --color-primary-container: #262626;
+  --color-on-primary-container: #ffffff;
+
+  --color-secondary: #737373;
+  --color-on-secondary: #ffffff;
+  --color-secondary-container: #e3e2e2;
+  --color-on-secondary-container: #646464;
+
+  --color-error: #ba1a1a;
+  --color-on-error: #ffffff;
+  --color-error-container: #ffdad6;
+  --color-on-error-container: #93000a;
+
+  --color-hairline: #e5e5e5;
+  --color-surface-fill: #f5f5f5;
+
+  --spacing-unit: 8px;
+  --spacing-gutter: 24px;
+  --spacing-margin-mobile: 16px;
+  --spacing-margin-desktop: 48px;
+  --spacing-section-gap: 80px;
+  --container-max: 1200px;
+}
+
+@theme inline {
+  --color-background: var(--color-background);
+  --color-surface: var(--color-surface);
+  --color-surface-dim: var(--color-surface-dim);
+  --color-surface-bright: var(--color-surface-bright);
+  --color-surface-container-lowest: var(--color-surface-container-lowest);
+  --color-surface-container-low: var(--color-surface-container-low);
+  --color-surface-container: var(--color-surface-container);
+  --color-surface-container-high: var(--color-surface-container-high);
+  --color-surface-container-highest: var(--color-surface-container-highest);
+  --color-surface-variant: var(--color-surface-variant);
+
+  --color-on-background: var(--color-on-background);
+  --color-on-surface: var(--color-on-surface);
+  --color-on-surface-variant: var(--color-on-surface-variant);
+
+  --color-outline: var(--color-outline);
+  --color-outline-variant: var(--color-outline-variant);
+
+  --color-primary: var(--color-primary);
+  --color-on-primary: var(--color-on-primary);
+  --color-primary-container: var(--color-primary-container);
+  --color-on-primary-container: var(--color-on-primary-container);
+
+  --color-secondary: var(--color-secondary);
+  --color-on-secondary: var(--color-on-secondary);
+  --color-secondary-container: var(--color-secondary-container);
+  --color-on-secondary-container: var(--color-on-secondary-container);
+
+  --color-error: var(--color-error);
+  --color-on-error: var(--color-on-error);
+  --color-error-container: var(--color-error-container);
+  --color-on-error-container: var(--color-on-error-container);
+
+  --color-hairline: var(--color-hairline);
+  --color-surface-fill: var(--color-surface-fill);
+
+  --font-display: "EB Garamond", serif;
+  --font-body: "Manrope", sans-serif;
+
+  --spacing-unit: var(--spacing-unit);
+  --spacing-gutter: var(--spacing-gutter);
+  --spacing-margin-mobile: var(--spacing-margin-mobile);
+  --spacing-margin-desktop: var(--spacing-margin-desktop);
+  --spacing-section-gap: var(--spacing-section-gap);
+
+  --radius-none: 0px;
+}
+
+body {
+  background: var(--color-background);
+  color: var(--color-on-background);
+  font-family: var(--font-body);
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.label-caps {
+  font-family: var(--font-body);
+  font-size: 12px;
+  line-height: 1;
+  letter-spacing: 0.15em;
+  font-weight: 600;
+  text-transform: uppercase;
+}

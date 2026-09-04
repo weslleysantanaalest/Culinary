@@ -1,0 +1,61 @@
+# Definicao declarativa das Tasks da Crew Culinary, na ordem do fluxo:
+# Project Analyzer -> Planner -> Developer -> Tester -> Reviewer -> Documenter.
+# expected_output define o contrato de saida que cada etapa deve produzir,
+# consumido pela etapa seguinte via `context` no crews/culinary_crew.py.
+
+analyze_project:
+  agent: project_analyzer
+  description: >
+    Leia o estado atual em {journal_dir} e o codigo em {project_root}.
+    Produza um resumo factual: stack detectada, telas/funcionalidades
+    existentes, divergencias conhecidas e lacunas. Nao proponha solucao.
+  expected_output: >
+    Bloco de texto com secoes "Fatos", "Indicios" e "Lacunas", cada item
+    referenciando o arquivo ou comando que o comprova.
+
+plan_next_minitask:
+  agent: planner
+  description: >
+    A partir do contexto do Project Analyzer e do backlog em
+    {journal_dir}/03-backlog.md, escolha a proxima minitask segura e minima.
+    Defina criterios de aceite verificaveis.
+  expected_output: >
+    Um unico item: id da minitask, objetivo em uma frase, criterios de
+    aceite em lista, arquivos provavelmente afetados.
+
+implement_minitask: 
+  agent: developer
+  description: >
+    Implemente exatamente a minitask escolhida pelo Planner. Faca a menor
+    mudanca possivel. Nao execute acao destrutiva ou externa.
+  expected_output: >
+    Lista de arquivos criados/alterados com um resumo de uma linha por
+    arquivo, e o motivo da mudanca.
+
+validate_minitask:
+  agent: tester
+  description: >
+    Execute lint, testes e build aplicaveis a mudanca do Developer. Capture
+    stdout/stderr/exit code de cada comando. Nao infira sucesso sem executar.
+  expected_output: >
+    Para cada comando executado: comando, exit code, resumo da saida
+    relevante (erros ou confirmacao de sucesso).
+
+review_minitask:
+  agent: reviewer
+  description: >
+    Revise o diff do Developer e a evidencia do Tester contra os criterios
+    de aceite definidos pelo Planner. Aprove ou devolva com motivo especifico.
+  expected_output: >
+    Decisao "APROVADO" ou "REPROVADO: <motivo>", citando o criterio de
+    aceite nao satisfeito quando reprovado.
+
+document_minitask:
+  agent: documenter
+  description: >
+    Registre a minitask concluida em {journal_dir}/minitasks/ seguindo o
+    formato padrao (objetivo, arquivos, comandos, testes, evidencias,
+    pendencias, proxima minitask). Enfileire para sincronizacao com Notion.
+  expected_output: >
+    Caminho do arquivo Markdown criado e confirmacao de que o item foi
+    adicionado a fila de sincronizacao (notion-sync-queue.jsonl).

@@ -1,0 +1,50 @@
+- generic [ref=e1]:
+  - generic [ref=e5]:
+    - banner [ref=e6]:
+      - generic [ref=e7]:
+        - link "CULINARY" [ref=e8] [cursor=pointer]:
+          - /url: /
+        - navigation [ref=e9]:
+          - link "RECEITAS" [ref=e10] [cursor=pointer]:
+            - /url: /
+          - link "PLANEJADOR" [ref=e11] [cursor=pointer]:
+            - /url: /planejador
+          - link "LISTA" [ref=e12] [cursor=pointer]:
+            - /url: /lista
+          - link "COZINHAR" [ref=e13] [cursor=pointer]:
+            - /url: /cozinhar
+        - generic "Buscar" [ref=e15] [cursor=pointer]: search
+    - main [ref=e16]:
+      - generic [ref=e17]:
+        - heading "A Arte da Culinária" [level=1] [ref=e18]
+        - paragraph [ref=e19]: Explore nossa coleção de receitas, criadas para transformar ingredientes simples em experiências gastronômicas inesquecíveis.
+      - generic [ref=e21]:
+        - generic [ref=e22]:
+          - generic [ref=e23]: Buscar receitas por título
+          - searchbox "Buscar receitas por título" [ref=e24]
+        - generic [ref=e25]:
+          - paragraph [ref=e27]: 1 de 1 receitas
+          - link [ref=e29] [cursor=pointer]:
+            - /url: /receitas/pudim-de-coco-queimado
+            - img "Pudim de coco queimado" [ref=e31]
+            - heading "Pudim de coco queimado" [level=2] [ref=e33]
+          - paragraph [ref=e34]: Todas as receitas foram carregadas.
+    - contentinfo [ref=e35]:
+      - generic [ref=e36]:
+        - generic [ref=e37]: CULINARY
+        - navigation [ref=e38]:
+          - link "Sobre" [ref=e39] [cursor=pointer]:
+            - /url: "#"
+          - link "Privacidade" [ref=e40] [cursor=pointer]:
+            - /url: "#"
+          - link "Termos" [ref=e41] [cursor=pointer]:
+            - /url: "#"
+        - generic [ref=e42]: © 2024 CULINARY. ALL RIGHTS RESERVED.
+  - alert [ref=e43]
+  - dialog [ref=e44]:
+    - generic [ref=e45]:
+      - paragraph [ref=e46]: CULINARY
+      - heading "Bem-vindo ao Culinary" [level=2] [ref=e47]
+      - paragraph [ref=e48]: Qual o seu nome?
+      - textbox "Seu nome" [active] [ref=e49]
+      - button "Continuar" [ref=e50]

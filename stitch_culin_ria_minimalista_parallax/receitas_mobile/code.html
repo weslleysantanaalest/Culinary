@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Galeria de Receitas - CULINÁRIA</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&amp;family=Manrope:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-container-highest": "#e5e2e1",
+                      "surface-container-low": "#f7f3f2",
+                      "primary-container": "#262626",
+                      "surface-container-lowest": "#ffffff",
+                      "inverse-surface": "#313030",
+                      "secondary-fixed-dim": "#c7c6c6",
+                      "on-background": "#1c1b1b",
+                      "outline-variant": "#c4c7c7",
+                      "on-tertiary-container": "#918d8b",
+                      "on-primary": "#ffffff",
+                      "on-primary-container": "#8e8d8c",
+                      "surface-tint": "#5f5e5e",
+                      "tertiary": "#131111",
+                      "surface-variant": "#e5e2e1",
+                      "on-error": "#ffffff",
+                      "surface-container": "#f1edec",
+                      "inverse-primary": "#c8c6c5",
+                      "on-primary-fixed-variant": "#474746",
+                      "on-secondary-fixed": "#1b1c1c",
+                      "on-primary-fixed": "#1b1c1c",
+                      "on-surface": "#1c1b1b",
+                      "background": "#fdf8f8",
+                      "on-tertiary-fixed-variant": "#494645",
+                      "tertiary-container": "#282625",
+                      "on-error-container": "#93000a",
+                      "on-surface-variant": "#444748",
+                      "outline": "#747878",
+                      "primary-fixed-dim": "#c8c6c5",
+                      "on-tertiary-fixed": "#1d1b1a",
+                      "on-secondary-fixed-variant": "#464747",
+                      "secondary": "#5e5e5e",
+                      "surface": "#fdf8f8",
+                      "primary-fixed": "#e4e2e1",
+                      "surface-dim": "#ddd9d8",
+                      "surface-bright": "#fdf8f8",
+                      "tertiary-fixed": "#e7e1df",
+                      "secondary-fixed": "#e3e2e2",
+                      "inverse-on-surface": "#f4f0ef",
+                      "on-secondary-container": "#646464",
+                      "tertiary-fixed-dim": "#cac5c4",
+                      "on-secondary": "#ffffff",
+                      "secondary-container": "#e3e2e2",
+                      "surface-container-high": "#ebe7e7",
+                      "error": "#ba1a1a",
+                      "primary": "#111111",
+                      "error-container": "#ffdad6",
+                      "on-tertiary": "#ffffff"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "gutter": "24px",
+                      "margin-desktop": "48px",
+                      "margin-mobile": "16px",
+                      "unit": "8px",
+                      "container-max": "1200px",
+                      "section-gap": "80px"
+              },
+              "fontFamily": {
+                      "label-caps": [
+                              "Manrope"
+                      ],
+                      "body-lg": [
+                              "Manrope"
+                      ],
+                      "headline-sm-mobile": [
+                              "EB Garamond"
+                      ],
+                      "headline-lg": [
+                              "EB Garamond"
+                      ],
+                      "display-lg": [
+                              "EB Garamond"
+                      ],
+                      "body-md": [
+                              "Manrope"
+                      ],
+                      "headline-xl": [
+                              "EB Garamond"
+                      ]
+              },
+              "fontSize": {
+                      "label-caps": [
+                              "12px",
+                              {
+                                      "lineHeight": "1.0",
+                                      "letterSpacing": "0.15em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-sm-mobile": [
+                              "24px",
+                              {
+                                      "lineHeight": "1.3",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "headline-lg": [
+                              "32px",
+                              {
+                                      "lineHeight": "1.3",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "display-lg": [
+                              "64px",
+                              {
+                                      "lineHeight": "1.1",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-xl": [
+                              "48px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "400"
+                              }
+                      ]
+              }
+            },
+          },
+        }
+      </script>
+</head>
+<body class="bg-surface text-on-surface font-body-md antialiased relative min-h-screen">
+<!-- Fixed Background -->
+<div class="fixed inset-0 z-0 pointer-events-none">
+<div class="w-full h-full bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida/AEtjO1WJ8fv3QB5XbGDi9OHwypivs7_S8Orsiy3QiPP9Dd21S14xDJyrQ5Vl3IdIK3eD1VwMtGaNkXPbCC1w4AH1120PevrXvRVvb7VvtWDnWm5IMT_z1xBAtjiRzExg6VBwakejx7NWxU53I3CywJ3qgNBrZK8nGJKqKb4Emp-q6eQeszqfkKBj56Zjg_ogwlmkj0le6RPVZb7rz9O0nVbwyftrJYgfRnkwpHlH7gKe_jPg-a-LDrsU9KyhktE');"></div>
+<div class="absolute inset-0 bg-surface/70 backdrop-blur-sm"></div>
+</div>
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-40 bg-surface/80 dark:bg-primary/80 backdrop-blur-md border-b border-outline-variant dark:border-on-surface-variant transition-transform duration-200" id="topAppBar">
+<div class="hidden md:flex justify-between items-center w-full px-margin-desktop max-w-container-max mx-auto h-20">
+<button class="text-primary dark:text-primary-fixed hover:opacity-70 transition-opacity">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">menu</span>
+</button>
+<h1 class="font-headline-lg text-headline-lg tracking-widest text-primary dark:text-primary-fixed">CULINÁRIA</h1>
+<div class="flex gap-8">
+<a class="text-primary dark:text-primary-fixed border-b-2 border-primary dark:border-primary-fixed pb-1 hover:opacity-70 transition-opacity" href="#">RECEITAS</a>
+<a class="text-secondary dark:text-secondary-fixed hover:text-primary dark:hover:text-primary-fixed transition-colors pb-1" href="#">PLANEJADOR</a>
+<a class="text-secondary dark:text-secondary-fixed hover:text-primary dark:hover:text-primary-fixed transition-colors pb-1" href="#">LISTA</a>
+<a class="text-secondary dark:text-secondary-fixed hover:text-primary dark:hover:text-primary-fixed transition-colors pb-1" href="#">COZINHAR</a>
+</div>
+<button class="text-primary dark:text-primary-fixed hover:opacity-70 transition-opacity">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">search</span>
+</button>
+</div>
+<!-- Mobile TopAppBar variant -->
+<div class="flex md:hidden justify-between items-center w-full px-margin-mobile h-16">
+<button class="text-primary dark:text-primary-fixed hover:opacity-70 transition-opacity">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">menu</span>
+</button>
+<h1 class="font-headline-sm-mobile text-headline-sm-mobile tracking-widest text-primary dark:text-primary-fixed">CULINÁRIA</h1>
+<button class="text-primary dark:text-primary-fixed hover:opacity-70 transition-opacity">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">search</span>
+</button>
+</div>
+</header>
+<!-- Main Content -->
+<main class="relative z-10 pt-[100px] md:pt-[140px] pb-[100px] px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="mb-section-gap">
+<h2 class="font-display-lg text-display-lg md:text-display-lg text-primary mb-4 text-center">Coleção</h2>
+<div class="w-16 h-px bg-outline-variant mx-auto mb-8"></div>
+<!-- Filters -->
+<div class="flex flex-wrap justify-center gap-4 mb-12">
+<button class="px-6 py-2 border border-primary text-primary font-label-caps text-label-caps hover:bg-surface-container-highest transition-colors">TUDO</button>
+<button class="px-6 py-2 border border-transparent text-secondary hover:text-primary font-label-caps text-label-caps transition-colors">CAFÉ DA MANHÃ</button>
+<button class="px-6 py-2 border border-transparent text-secondary hover:text-primary font-label-caps text-label-caps transition-colors">PRINCIPAL</button>
+<button class="px-6 py-2 border border-transparent text-secondary hover:text-primary font-label-caps text-label-caps transition-colors">SOBREMESA</button>
+</div>
+</div>
+<!-- Recipe Grid (Bento/Asymmetric style) -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Large Featured Card -->
+<article class="md:col-span-8 group cursor-pointer border border-outline-variant/30 bg-surface-container-lowest/80 backdrop-blur-sm p-4 hover:shadow-lg transition-all duration-300">
+<div class="relative overflow-hidden mb-6 aspect-[16/9]">
+<img class="object-cover w-full h-full transform group-hover:scale-105 transition-transform duration-700" data-alt="A beautifully plated stack of perfect golden brown pancakes drizzled with maple syrup and topped with fresh blueberries. The setting is a bright, minimalist modern kitchen with soft morning light filtering through a large window, creating a serene and premium light-mode aesthetic. High resolution food photography style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7vCXKLhhaKTLo0E1NMuxlHr8s12GVM_NZNlGHhVoGasW7PChuv8qk_4htiQt0WX5PSAdYNmRwKzm7ZMNrUimuCE-jAtwIjiDL-FvRl_ujPUjSr2IyCJ6jtLMcEA5_BD52G9IsK8PvDHsxUczB9AVpic3jgY8WZEjG5ADjTXZgGHXEqxRAs5llNvLhUxc1UgbNj5u4_fkt_eC7pPk26bu3BUWf86OWi1gSScWE_dgFAlCsN3oQwHG0"/>
+</div>
+<div class="text-center px-4 pb-4">
+<span class="inline-block px-3 py-1 bg-surface-container-low text-secondary font-label-caps text-label-caps mb-3 uppercase">Café da Manhã</span>
+<h3 class="font-headline-xl text-headline-xl text-primary mb-3">Panqueca Perfeita</h3>
+<div class="flex items-center justify-center gap-4 font-label-caps text-label-caps text-secondary">
+<span>25 MIN</span>
+<span class="w-px h-3 bg-outline-variant"></span>
+<span>FÁCIL</span>
+</div>
+</div>
+</article>
+<!-- Regular Card -->
+<article class="md:col-span-4 group cursor-pointer border border-outline-variant/30 bg-surface-container-lowest/80 backdrop-blur-sm p-4 hover:shadow-lg transition-all duration-300">
+<div class="relative overflow-hidden mb-6 aspect-square">
+<img class="object-cover w-full h-full transform group-hover:scale-105 transition-transform duration-700" data-alt="A steaming bowl of creamy mushroom risotto garnished with fresh parsley and shaved parmesan. Shot from a top-down angle on a clean white marble countertop. The lighting is soft and diffused, highlighting the rich textures of the dish in a premium, minimalist culinary setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuChBGzUNF8ZsvLEWf5_MAsZVEaZEQ2iwUz1fz9E8g6vbeuDZdOoor1f0J3NtvO8nbtboLClX-7mDCgQ9e8T7Jzq_D6T9EzYnZYmgkpRGNN0LYFQ2QPUE6vwOCaNPkqmAGm2JUhtQlccjKzxq88UR_cHO_qk7zFg479S0_Y14rOTRs745zWwIlwB9Bbcn1aT99g3jF2K071G3ADVmvPGAdiFe0KyYJo4xp5dfSpFQLJJBRiUSuYeGK6Y"/>
+</div>
+<div class="text-center px-2 pb-2">
+<span class="inline-block px-3 py-1 bg-surface-container-low text-secondary font-label-caps text-label-caps mb-3 uppercase">Principal</span>
+<h3 class="font-headline-lg text-headline-lg text-primary mb-3">Risoto de Cogumelos</h3>
+<div class="flex items-center justify-center gap-4 font-label-caps text-label-caps text-secondary">
+<span>45 MIN</span>
+<span class="w-px h-3 bg-outline-variant"></span>
+<span>MÉDIO</span>
+</div>
+</div>
+</article>
+<!-- Regular Card -->
+<article class="md:col-span-4 group cursor-pointer border border-outline-variant/30 bg-surface-container-lowest/80 backdrop-blur-sm p-4 hover:shadow-lg transition-all duration-300">
+<div class="relative overflow-hidden mb-6 aspect-square md:aspect-[3/4]">
+<img class="object-cover w-full h-full transform group-hover:scale-105 transition-transform duration-700" data-alt="A slice of elegant lemon tart on a pristine white ceramic plate. The tart has a perfectly smooth bright yellow filling and a delicate buttery crust. The background is a stark, bright minimalist kitchen surface, emphasizing the vivid color of the dessert in a high-end editorial style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPIU-p4lKDvDqyjbXg-GyWPncrmeDpmQ2K82mYT-wVA3RW71ggPbJ7LGenFnFbCjJOaIIhJmyRQZQVP0puZ094cDVqUMJ9pdTZhyRtFwTsOcYjion_k_jTLF--lq01104lro00qrS0Qv7sTlX1Ro2sGuIjhov8OFrZ2WT-Mp0MLZzbNjKaSsusB0tUTQpzMAmdLgOSudKnX8nsBakTHkf02D_HBj3N76Lk_50McaiUi3G1LNgRlE3M"/>
+</div>
+<div class="text-center px-2 pb-2">
+<span class="inline-block px-3 py-1 bg-surface-container-low text-secondary font-label-caps text-label-caps mb-3 uppercase">Sobremesa</span>
+<h3 class="font-headline-lg text-headline-lg text-primary mb-3">Tarte de Limão</h3>
+<div class="flex items-center justify-center gap-4 font-label-caps text-label-caps text-secondary">
+<span>1 HORA</span>
+<span class="w-px h-3 bg-outline-variant"></span>
+<span>DIFÍCIL</span>
+</div>
+</div>
+</article>
+<!-- Regular Card -->
+<article class="md:col-span-4 group cursor-pointer border border-outline-variant/30 bg-surface-container-lowest/80 backdrop-blur-sm p-4 hover:shadow-lg transition-all duration-300">
+<div class="relative overflow-hidden mb-6 aspect-square md:aspect-[3/4]">
+<img class="object-cover w-full h-full transform group-hover:scale-105 transition-transform duration-700" data-alt="A fresh, vibrant caprese salad arranged beautifully on a large, flat, light grey plate. Slices of heirloom tomatoes alternate with fresh mozzarella and basil leaves, drizzled with olive oil. The scene is shot with crisp, bright natural light in a modern, serene dining environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGgxrIZcVdbOZYo2zadkKgKhBr4C5CyS0Ku0DQmivwLvXKIaJbA392Kq0QNoWeuegw70Uec5C_6e2ZF6PlbbQu0OeTogXpOiDWX6nj8TdSnmhfGKfGus_JuqYtAgn35pUOld2xcPum1Kkg3MrQdM5uYUliy54HnhZT3v3O4onl60BdbBB-2_00WqYl05DnZF32CU70YrBFhhSaCMgc8PwzWPTSkQAam4m_ffUE8A59e5ag1shvYA8H"/>
+</div>
+<div class="text-center px-2 pb-2">
+<span class="inline-block px-3 py-1 bg-surface-container-low text-secondary font-label-caps text-label-caps mb-3 uppercase">Entrada</span>
+<h3 class="font-headline-lg text-headline-lg text-primary mb-3">Salada Caprese</h3>
+<div class="flex items-center justify-center gap-4 font-label-caps text-label-caps text-secondary">
+<span>15 MIN</span>
+<span class="w-px h-3 bg-outline-variant"></span>
+<span>FÁCIL</span>
+</div>
+</div>
+</article>
+<!-- Regular Card -->
+<article class="md:col-span-4 group cursor-pointer border border-outline-variant/30 bg-surface-container-lowest/80 backdrop-blur-sm p-4 hover:shadow-lg transition-all duration-300">
+<div class="relative overflow-hidden mb-6 aspect-square md:aspect-[3/4]">
+<img class="object-cover w-full h-full transform group-hover:scale-105 transition-transform duration-700" data-alt="Artisanal sourdough bread loaf resting on a rustic wooden cutting board, with flour dusted around it. The background features clean, geometric lines of a modern minimalist kitchen. The lighting highlights the crusty texture of the bread, conveying a premium artisanal culinary feel." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxXb6KF9_9IOrvI7GhloLBRFl8CnPM8lTuuqjKa4D6NejSM-9EVN_wAP7OJP0ZUKQbndmrGMNKjAyXoVgkVKng0Ldi2pA8TWo3v8eC9oT66jMIRpiQ7t3aI1NGCFXu00oP17gGym63M11aSiZYrmYngxBEdnZK1_GzvDSsxqgalIKpTcO84bX1xB5V0czTeoAUvHzGpoBbJ-8m0uXahxrR9iiemq8rBfC8TYMqkibtVSUv3HJ1A38q"/>
+</div>
+<div class="text-center px-2 pb-2">
+<span class="inline-block px-3 py-1 bg-surface-container-low text-secondary font-label-caps text-label-caps mb-3 uppercase">Pães</span>
+<h3 class="font-headline-lg text-headline-lg text-primary mb-3">Pão Sourdough</h3>
+<div class="flex items-center justify-center gap-4 font-label-caps text-label-caps text-secondary">
+<span>24 HORAS</span>
+<span class="w-px h-3 bg-outline-variant"></span>
+<span>DIFÍCIL</span>
+</div>
+</div>
+</article>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="md:hidden fixed bottom-0 w-full z-50 bg-surface/90 dark:bg-primary/90 backdrop-blur-lg border-t border-outline-variant dark:border-on-surface-variant flex justify-around items-center h-16 px-4 pb-safe">
+<a class="flex flex-col items-center justify-center text-primary dark:text-primary-fixed font-semibold scale-110 hover:opacity-100 transition-opacity" href="#">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 1;">restaurant_menu</span>
+<span class="font-label-caps text-[10px]">RECEITAS</span>
+</a>
+<a class="flex flex-col items-center justify-center text-secondary dark:text-secondary-fixed opacity-60 hover:opacity-100 transition-opacity" href="#">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 0;">calendar_today</span>
+<span class="font-label-caps text-[10px]">PLANEJADOR</span>
+</a>
+<a class="flex flex-col items-center justify-center text-secondary dark:text-secondary-fixed opacity-60 hover:opacity-100 transition-opacity" href="#">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 0;">format_list_bulleted</span>
+<span class="font-label-caps text-[10px]">LISTA</span>
+</a>
+<a class="flex flex-col items-center justify-center text-secondary dark:text-secondary-fixed opacity-60 hover:opacity-100 transition-opacity" href="#">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 0;">skillet</span>
+<span class="font-label-caps text-[10px]">COZINHAR</span>
+</a>
+</nav>
+<script>
+        // Simple scroll interaction for top app bar
+        let lastScrollTop = 0;
+        const topAppBar = document.getElementById('topAppBar');
+        
+        window.addEventListener('scroll', () => {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            if (scrollTop > lastScrollTop && scrollTop > 80) {
+                // Downscroll
+                topAppBar.style.transform = 'translateY(-100%)';
+            } else {
+                // Upscroll
+                topAppBar.style.transform = 'translateY(0)';
+            }
+            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+        }, false);
+    </script>
+</body></html>

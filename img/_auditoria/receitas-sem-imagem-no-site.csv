@@ -1,0 +1,74 @@
+Ordem,ID,Receita,Slug,Arquivo_Procurado,Imagem_Encontrada_em_img,Imagem_Aprovada,Presente_em_public_images_recipes,Manifesto_Correto,Status_HTTP_no_site,Motivo_do_Placeholder,Acao_Necessaria
+2,30,Molho zabaglione,molho-zabaglione,(nenhum),nao,nao,nao,sim,N/A (sem imagem aprovada),Molho zabaglione: guarnição (hortelã + pó de especiaria) não confirmada nos ingredientes (parcialmente ilegíveis).,Nenhuma — decisão editorial documentada
+8,60,Torta antiga,torta-antiga,(nenhum),nao,nao,nao,sim,N/A (sem imagem aprovada),Torta antiga (ambas versões): massa treliçada incompatível com bolo denso de chocolate/amêndoas em camadas coberto de nata.,Nenhuma — decisão editorial documentada
+12,46,Waffles de chocolate,waffles-de-chocolate,(nenhum),nao,nao,nao,sim,N/A (sem imagem aprovada),"Waffles de chocolate: apresentados como waffles individuais com chantilly, não como pilha recheada e gelada.",Nenhuma — decisão editorial documentada
+15,65,Bolo de mel e cacau (título atribuído pelo conteúdo),bolo-de-mel-e-cacau-titulo-atribuido-pelo-conteudo,(nenhum),nao,nao,nao,sim,N/A (sem imagem aprovada),Bolo de mel e cacau: nozes/amêndoas decorativas no topo não confirmadas.,Nenhuma — decisão editorial documentada
+17,43,Torta de Natal australiana,torta-de-natal-australiana,(nenhum),nao,nao,nao,sim,N/A (sem imagem aprovada),"Torta de Natal australiana: formato individual fechado tipo mince pie, não bolo assado inteiro com glacê.",Nenhuma — decisão editorial documentada
+18,73,Torta chiffon de limão,torta-chiffon-de-limao,(nenhum),nao,nao,nao,sim,N/A (sem imagem aprovada),"Torta chiffon de limão: aparência de cheesecake denso, não recheio leve e aerado (chiffon).",Nenhuma — decisão editorial documentada
+19,49,Chocolate chiffon pie,chocolate-chiffon-pie,(nenhum),nao,nao,nao,sim,N/A (sem imagem aprovada),"Chocolate chiffon pie: recheio bege claro, não claramente marrom-chocolate como exigido.",Nenhuma — decisão editorial documentada
+20,17,Torta de maçã (Ligia),torta-de-maca-ligia,(nenhum),nao,nao,nao,sim,N/A (sem imagem aprovada),Nenhuma imagem gerada ainda para esta receita.,Aguardar geração/aprovação de imagem
+21,18,Bolo inglês,bolo-ingles,(nenhum),nao,nao,nao,sim,N/A (sem imagem aprovada),Nenhuma imagem gerada ainda para esta receita.,Aguardar geração/aprovação de imagem
+22,38,Bolinha de queijo,bolinha-de-queijo,(nenhum),nao,nao,nao,sim,N/A (sem imagem aprovada),Nenhuma imagem gerada ainda para esta receita.,Aguardar geração/aprovação de imagem
+23,28,Manjar branco,manjar-branco,(nenhum),nao,nao,nao,sim,N/A (sem imagem aprovada),Nenhuma imagem gerada ainda para esta receita.,Aguardar geração/aprovação de imagem
+24,4,Bolachinhas com geleia ou mel,bolachinhas-com-geleia-ou-mel,(nenhum),nao,nao,nao,sim,N/A (sem imagem aprovada),Nenhuma imagem gerada ainda para esta receita.,Aguardar geração/aprovação de imagem
+25,48,Bolachinhas (Ivo Murilo),bolachinhas-ivo-murilo,(nenhum),nao,nao,nao,sim,N/A (sem imagem aprovada),Nenhuma imagem gerada ainda para esta receita.,Aguardar geração/aprovação de imagem
+26,34,Sequilhos (Rachel),sequilhos-rachel,(nenhum),nao,nao,nao,sim,N/A (sem imagem aprovada),Nenhuma imagem gerada ainda para esta receita.,Aguardar geração/aprovação de imagem
+27,57,Bolacha (José Carlos),bolacha-jose-carlos,(nenhum),nao,nao,nao,sim,N/A (sem imagem aprovada),Nenhuma imagem gerada ainda para esta receita.,Aguardar geração/aprovação de imagem
+28,19,Biscoito de geladeira,biscoito-de-geladeira,(nenhum),nao,nao,nao,sim,N/A (sem imagem aprovada),Nenhuma imagem gerada ainda para esta receita.,Aguardar geração/aprovação de imagem
+29,31,Biscoitinhos,biscoitinhos,(nenhum),nao,nao,nao,sim,N/A (sem imagem aprovada),Nenhuma imagem gerada ainda para esta receita.,Aguardar geração/aprovação de imagem
+30,33,Pie shell,pie-shell,(nenhum),nao,nao,nao,sim,N/A (sem imagem aprovada),Nenhuma imagem gerada ainda para esta receita.,Aguardar geração/aprovação de imagem
+31,9,Pudim de castanhas,pudim-de-castanhas,(nenhum),nao,nao,nao,sim,N/A (sem imagem aprovada),Nenhuma imagem gerada ainda para esta receita.,Aguardar geração/aprovação de imagem
+32,29,Sorvete base,sorvete-base,(nenhum),nao,nao,nao,sim,N/A (sem imagem aprovada),Nenhuma imagem gerada ainda para esta receita.,Aguardar geração/aprovação de imagem
+33,83,Creme de queijo,creme-de-queijo,(nenhum),nao,nao,nao,sim,N/A (sem imagem aprovada),Nenhuma imagem gerada ainda para esta receita.,Aguardar geração/aprovação de imagem
+34,44,Creme de laranja,creme-de-laranja,(nenhum),nao,nao,nao,sim,N/A (sem imagem aprovada),Nenhuma imagem gerada ainda para esta receita.,Aguardar geração/aprovação de imagem
+35,66,Bolo de fubá (Yone),bolo-de-fuba-yone,(nenhum),nao,nao,nao,sim,N/A (sem imagem aprovada),Nenhuma imagem gerada ainda para esta receita.,Aguardar geração/aprovação de imagem
+36,78,Espuma mousse de chocolate (Yone),espuma-mousse-de-chocolate-yone,(nenhum),nao,nao,nao,sim,N/A (sem imagem aprovada),Nenhuma imagem gerada ainda para esta receita.,Aguardar geração/aprovação de imagem
+37,59,Doce de damasco,doce-de-damasco,(nenhum),nao,nao,nao,sim,N/A (sem imagem aprovada),Nenhuma imagem gerada ainda para esta receita.,Aguardar geração/aprovação de imagem
+38,74,Massa para tortas,massa-para-tortas,(nenhum),nao,nao,nao,sim,N/A (sem imagem aprovada),Nenhuma imagem gerada ainda para esta receita.,Aguardar geração/aprovação de imagem
+39,64,Recheio de limão,recheio-de-limao,(nenhum),nao,nao,nao,sim,N/A (sem imagem aprovada),Nenhuma imagem gerada ainda para esta receita.,Aguardar geração/aprovação de imagem
+40,42,Doce de batata (Sofia Coutinho),doce-de-batata-sofia-coutinho,(nenhum),nao,nao,nao,sim,N/A (sem imagem aprovada),Nenhuma imagem gerada ainda para esta receita.,Aguardar geração/aprovação de imagem
+41,37,Rosca (Elisa),rosca-elisa,(nenhum),nao,nao,nao,sim,N/A (sem imagem aprovada),Nenhuma imagem gerada ainda para esta receita.,Aguardar geração/aprovação de imagem
+42,27,Suflê de chocolate (Sugi),sufle-de-chocolate-sugi,(nenhum),nao,nao,nao,sim,N/A (sem imagem aprovada),Nenhuma imagem gerada ainda para esta receita.,Aguardar geração/aprovação de imagem
+43,1,Bolo de farinha de milho,bolo-de-farinha-de-milho,(nenhum),nao,nao,nao,sim,N/A (sem imagem aprovada),Nenhuma imagem gerada ainda para esta receita.,Aguardar geração/aprovação de imagem
+44,53,Bolo A,bolo-a,(nenhum),nao,nao,nao,sim,N/A (sem imagem aprovada),Nenhuma imagem gerada ainda para esta receita.,Aguardar geração/aprovação de imagem
+45,10,Bolo da Lila,bolo-da-lila,(nenhum),nao,nao,nao,sim,N/A (sem imagem aprovada),Nenhuma imagem gerada ainda para esta receita.,Aguardar geração/aprovação de imagem
+46,41,Rosca coroa (Leis),rosca-coroa-leis,(nenhum),nao,nao,nao,sim,N/A (sem imagem aprovada),Nenhuma imagem gerada ainda para esta receita.,Aguardar geração/aprovação de imagem
+47,76,Puchero,puchero,(nenhum),nao,nao,nao,sim,N/A (sem imagem aprovada),Nenhuma imagem gerada ainda para esta receita.,Aguardar geração/aprovação de imagem
+48,21,Molho de tomates,molho-de-tomates,(nenhum),nao,nao,nao,sim,N/A (sem imagem aprovada),Nenhuma imagem gerada ainda para esta receita.,Aguardar geração/aprovação de imagem
+49,67,Filé-mignon à la crème,file-mignon-a-la-creme,(nenhum),nao,nao,nao,sim,N/A (sem imagem aprovada),Nenhuma imagem gerada ainda para esta receita.,Aguardar geração/aprovação de imagem
+50,69,Molho de creme,molho-de-creme,(nenhum),nao,nao,nao,sim,N/A (sem imagem aprovada),Nenhuma imagem gerada ainda para esta receita.,Aguardar geração/aprovação de imagem
+51,50,Lasanha de frango,lasanha-de-frango,(nenhum),nao,nao,nao,sim,N/A (sem imagem aprovada),Nenhuma imagem gerada ainda para esta receita.,Aguardar geração/aprovação de imagem
+52,82,Creme de chocolate e frutas,creme-de-chocolate-e-frutas,(nenhum),nao,nao,nao,sim,N/A (sem imagem aprovada),Nenhuma imagem gerada ainda para esta receita.,Aguardar geração/aprovação de imagem
+53,58,Crêpe Suzette,crepe-suzette,(nenhum),nao,nao,nao,sim,N/A (sem imagem aprovada),Nenhuma imagem gerada ainda para esta receita.,Aguardar geração/aprovação de imagem
+54,70,Caramelo,caramelo,(nenhum),nao,nao,nao,sim,N/A (sem imagem aprovada),Nenhuma imagem gerada ainda para esta receita.,Aguardar geração/aprovação de imagem
+55,79,Gelado de chocolate,gelado-de-chocolate,(nenhum),nao,nao,nao,sim,N/A (sem imagem aprovada),Nenhuma imagem gerada ainda para esta receita.,Aguardar geração/aprovação de imagem
+56,85,Gelado de morangos,gelado-de-morangos,(nenhum),nao,nao,nao,sim,N/A (sem imagem aprovada),Nenhuma imagem gerada ainda para esta receita.,Aguardar geração/aprovação de imagem
+57,80,Marron glacé,marron-glace,(nenhum),nao,nao,nao,sim,N/A (sem imagem aprovada),Nenhuma imagem gerada ainda para esta receita.,Aguardar geração/aprovação de imagem
+58,7,Parfait exotique,parfait-exotique,(nenhum),nao,nao,nao,sim,N/A (sem imagem aprovada),Nenhuma imagem gerada ainda para esta receita.,Aguardar geração/aprovação de imagem
+59,51,Charlotte de chocolate,charlotte-de-chocolate,(nenhum),nao,nao,nao,sim,N/A (sem imagem aprovada),Nenhuma imagem gerada ainda para esta receita.,Aguardar geração/aprovação de imagem
+60,3,Pudim de coco,pudim-de-coco,(nenhum),nao,nao,nao,sim,N/A (sem imagem aprovada),Nenhuma imagem gerada ainda para esta receita.,Aguardar geração/aprovação de imagem
+61,68,Creme de laranja (mamãe),creme-de-laranja-mamae,(nenhum),nao,nao,nao,sim,N/A (sem imagem aprovada),Nenhuma imagem gerada ainda para esta receita.,Aguardar geração/aprovação de imagem
+62,54,Bala (M. Gilda),bala-m-gilda,(nenhum),nao,nao,nao,sim,N/A (sem imagem aprovada),Nenhuma imagem gerada ainda para esta receita.,Aguardar geração/aprovação de imagem
+63,12,Rosquinha econômica,rosquinha-economica,(nenhum),nao,nao,nao,sim,N/A (sem imagem aprovada),Nenhuma imagem gerada ainda para esta receita.,Aguardar geração/aprovação de imagem
+64,22,Torta de abacaxi (Tia Vag),torta-de-abacaxi-tia-vag,(nenhum),nao,nao,nao,sim,N/A (sem imagem aprovada),Nenhuma imagem gerada ainda para esta receita.,Aguardar geração/aprovação de imagem
+65,63,Pudim de pão,pudim-de-pao,(nenhum),nao,nao,nao,sim,N/A (sem imagem aprovada),Nenhuma imagem gerada ainda para esta receita.,Aguardar geração/aprovação de imagem
+66,25,Bolo de mandioca (receita datilografada),bolo-de-mandioca-receita-datilografada,(nenhum),nao,nao,nao,sim,N/A (sem imagem aprovada),Nenhuma imagem gerada ainda para esta receita.,Aguardar geração/aprovação de imagem
+67,36,Banana cake,banana-cake,(nenhum),nao,nao,nao,sim,N/A (sem imagem aprovada),Nenhuma imagem gerada ainda para esta receita.,Aguardar geração/aprovação de imagem
+68,61,Rocambole de frutas com chantilly,rocambole-de-frutas-com-chantilly,(nenhum),nao,nao,nao,sim,N/A (sem imagem aprovada),Nenhuma imagem gerada ainda para esta receita.,Aguardar geração/aprovação de imagem
+69,84,Pavê delicioso,pave-delicioso,(nenhum),nao,nao,nao,sim,N/A (sem imagem aprovada),Nenhuma imagem gerada ainda para esta receita.,Aguardar geração/aprovação de imagem
+70,47,Fudge de castanha-do-pará,fudge-de-castanha-do-para,(nenhum),nao,nao,nao,sim,N/A (sem imagem aprovada),Nenhuma imagem gerada ainda para esta receita.,Aguardar geração/aprovação de imagem
+71,6,Pão de ló americano,pao-de-lo-americano,(nenhum),nao,nao,nao,sim,N/A (sem imagem aprovada),Nenhuma imagem gerada ainda para esta receita.,Aguardar geração/aprovação de imagem
+72,16,Bolo de Natal,bolo-de-natal,(nenhum),nao,nao,nao,sim,N/A (sem imagem aprovada),Nenhuma imagem gerada ainda para esta receita.,Aguardar geração/aprovação de imagem
+73,15,Bolo de laranja,bolo-de-laranja,(nenhum),nao,nao,nao,sim,N/A (sem imagem aprovada),Nenhuma imagem gerada ainda para esta receita.,Aguardar geração/aprovação de imagem
+74,62,Fatias de Pão João (Belinha),fatias-de-pao-joao-belinha,(nenhum),nao,nao,nao,sim,N/A (sem imagem aprovada),Nenhuma imagem gerada ainda para esta receita.,Aguardar geração/aprovação de imagem
+75,2,Balas de coco,balas-de-coco,(nenhum),nao,nao,nao,sim,N/A (sem imagem aprovada),Nenhuma imagem gerada ainda para esta receita.,Aguardar geração/aprovação de imagem
+76,77,Cocada de leite condensado,cocada-de-leite-condensado,(nenhum),nao,nao,nao,sim,N/A (sem imagem aprovada),Nenhuma imagem gerada ainda para esta receita.,Aguardar geração/aprovação de imagem
+77,14,Pão de mel,pao-de-mel,(nenhum),nao,nao,nao,sim,N/A (sem imagem aprovada),Nenhuma imagem gerada ainda para esta receita.,Aguardar geração/aprovação de imagem
+78,13,Bolo de Nescau (Joana),bolo-de-nescau-joana,(nenhum),nao,nao,nao,sim,N/A (sem imagem aprovada),Nenhuma imagem gerada ainda para esta receita.,Aguardar geração/aprovação de imagem
+79,32,Biscoito de areia,biscoito-de-areia,(nenhum),nao,nao,nao,sim,N/A (sem imagem aprovada),Nenhuma imagem gerada ainda para esta receita.,Aguardar geração/aprovação de imagem
+80,45,Cuca (mamãe),cuca-mamae,(nenhum),nao,nao,nao,sim,N/A (sem imagem aprovada),Nenhuma imagem gerada ainda para esta receita.,Aguardar geração/aprovação de imagem
+81,39,Bolachinha de castanha-do-pará,bolachinha-de-castanha-do-para,(nenhum),nao,nao,nao,sim,N/A (sem imagem aprovada),Nenhuma imagem gerada ainda para esta receita.,Aguardar geração/aprovação de imagem
+82,72,Fudge de geladeira,fudge-de-geladeira,(nenhum),nao,nao,nao,sim,N/A (sem imagem aprovada),Nenhuma imagem gerada ainda para esta receita.,Aguardar geração/aprovação de imagem
+83,71,Aperitivo (Mr. Dave),aperitivo-mr-dave,(nenhum),nao,nao,nao,sim,N/A (sem imagem aprovada),Nenhuma imagem gerada ainda para esta receita.,Aguardar geração/aprovação de imagem
+84,55,Torta de maçã (Vila),torta-de-maca-vila,(nenhum),nao,nao,nao,sim,N/A (sem imagem aprovada),Nenhuma imagem gerada ainda para esta receita.,Aguardar geração/aprovação de imagem
+85,20,Torta assombrosa (Lucia Poteller),torta-assombrosa-lucia-poteller,(nenhum),nao,nao,nao,sim,N/A (sem imagem aprovada),Nenhuma imagem gerada ainda para esta receita.,Aguardar geração/aprovação de imagem

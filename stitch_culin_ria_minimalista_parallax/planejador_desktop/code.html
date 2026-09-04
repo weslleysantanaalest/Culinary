@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CULINARY - Meal Planner</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&amp;family=Manrope:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-container-highest": "#e5e2e1",
+                      "surface-container-low": "#f7f3f2",
+                      "primary-container": "#262626",
+                      "surface-container-lowest": "#ffffff",
+                      "inverse-surface": "#313030",
+                      "secondary-fixed-dim": "#c7c6c6",
+                      "on-background": "#1c1b1b",
+                      "outline-variant": "#c4c7c7",
+                      "on-tertiary-container": "#918d8b",
+                      "on-primary": "#ffffff",
+                      "on-primary-container": "#8e8d8c",
+                      "surface-tint": "#5f5e5e",
+                      "tertiary": "#131111",
+                      "surface-variant": "#e5e2e1",
+                      "on-error": "#ffffff",
+                      "surface-container": "#f1edec",
+                      "inverse-primary": "#c8c6c5",
+                      "on-primary-fixed-variant": "#474746",
+                      "on-secondary-fixed": "#1b1c1c",
+                      "on-primary-fixed": "#1b1c1c",
+                      "on-surface": "#1c1b1b",
+                      "background": "#fdf8f8",
+                      "on-tertiary-fixed-variant": "#494645",
+                      "tertiary-container": "#282625",
+                      "on-error-container": "#93000a",
+                      "on-surface-variant": "#444748",
+                      "outline": "#747878",
+                      "primary-fixed-dim": "#c8c6c5",
+                      "on-tertiary-fixed": "#1d1b1a",
+                      "on-secondary-fixed-variant": "#464747",
+                      "secondary": "#5e5e5e",
+                      "surface": "#fdf8f8",
+                      "primary-fixed": "#e4e2e1",
+                      "surface-dim": "#ddd9d8",
+                      "surface-bright": "#fdf8f8",
+                      "tertiary-fixed": "#e7e1df",
+                      "secondary-fixed": "#e3e2e2",
+                      "inverse-on-surface": "#f4f0ef",
+                      "on-secondary-container": "#646464",
+                      "tertiary-fixed-dim": "#cac5c4",
+                      "on-secondary": "#ffffff",
+                      "secondary-container": "#e3e2e2",
+                      "surface-container-high": "#ebe7e7",
+                      "error": "#ba1a1a",
+                      "primary": "#111111",
+                      "error-container": "#ffdad6",
+                      "on-tertiary": "#ffffff"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "gutter": "24px",
+                      "margin-desktop": "48px",
+                      "margin-mobile": "16px",
+                      "unit": "8px",
+                      "container-max": "1200px",
+                      "section-gap": "80px"
+              },
+              "fontFamily": {
+                      "label-caps": [
+                              "Manrope"
+                      ],
+                      "body-lg": [
+                              "Manrope"
+                      ],
+                      "headline-sm-mobile": [
+                              "EB Garamond"
+                      ],
+                      "headline-lg": [
+                              "EB Garamond"
+                      ],
+                      "display-lg": [
+                              "EB Garamond"
+                      ],
+                      "body-md": [
+                              "Manrope"
+                      ],
+                      "headline-xl": [
+                              "EB Garamond"
+                      ]
+              },
+              "fontSize": {
+                      "label-caps": [
+                              "12px",
+                              {
+                                      "lineHeight": "1.0",
+                                      "letterSpacing": "0.15em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-sm-mobile": [
+                              "24px",
+                              {
+                                      "lineHeight": "1.3",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "headline-lg": [
+                              "32px",
+                              {
+                                      "lineHeight": "1.3",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "display-lg": [
+                              "64px",
+                              {
+                                      "lineHeight": "1.1",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-xl": [
+                              "48px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "400"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .bg-pattern {
+            background-image: radial-gradient(var(--tw-colors-outline-variant) 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col relative overflow-x-hidden">
+<!-- Background Image Layer -->
+<div class="fixed inset-0 z-0">
+<img alt="Background" class="w-full h-full object-cover opacity-20 filter grayscale blur-sm" src="https://lh3.googleusercontent.com/aida/AEtjO1WJ8fv3QB5XbGDi9OHwypivs7_S8Orsiy3QiPP9Dd21S14xDJyrQ5Vl3IdIK3eD1VwMtGaNkXPbCC1w4AH1120PevrXvRVvb7VvtWDnWm5IMT_z1xBAtjiRzExg6VBwakejx7NWxU53I3CywJ3qgNBrZK8nGJKqKb4Emp-q6eQeszqfkKBj56Zjg_ogwlmkj0le6RPVZb7rz9O0nVbwyftrJYgfRnkwpHlH7gKe_jPg-a-LDrsU9KyhktE"/>
+</div>
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/30 transition-opacity">
+<div class="flex justify-between items-center w-full px-margin-desktop py-4 max-w-container-max mx-auto">
+<a class="font-headline-lg text-headline-lg tracking-tighter text-primary" href="#">CULINARY</a>
+<nav class="hidden md:flex space-x-8 items-center font-label-caps text-label-caps">
+<a class="text-secondary hover:text-primary transition-colors duration-300" href="#">RECEITAS</a>
+<a class="text-primary border-b-2 border-primary pb-1 opacity-70 transition-opacity" href="#">PLANEJADOR</a>
+<a class="text-secondary hover:text-primary transition-colors duration-300" href="#">LISTA</a>
+<a class="text-secondary hover:text-primary transition-colors duration-300" href="#">COZINHAR</a>
+</nav>
+<div class="flex items-center space-x-6 text-primary">
+<button class="hover:opacity-70 transition-opacity">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+</button>
+<button class="hover:opacity-70 transition-opacity">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+</button>
+<button class="hover:opacity-70 transition-opacity hidden md:block">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+</button>
+<!-- Mobile Menu Toggle -->
+<button class="md:hidden hover:opacity-70 transition-opacity">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-grow pt-32 pb-24 px-margin-mobile md:px-margin-desktop relative z-10 max-w-container-max mx-auto w-full">
+<div class="flex justify-between items-end mb-12">
+<div>
+<h1 class="font-display-lg text-display-lg text-primary mb-2">Semana Atual</h1>
+<p class="font-label-caps text-label-caps text-secondary tracking-widest uppercase">14 - 20 de Outubro, 2024</p>
+</div>
+<div class="flex space-x-4">
+<button class="bg-transparent border border-primary text-primary px-8 py-3 font-label-caps text-label-caps hover:bg-surface-container-low transition-colors rounded-none">
+<span class="material-symbols-outlined align-middle mr-2 text-[18px]">chevron_left</span> Anterior
+                </button>
+<button class="bg-transparent border border-primary text-primary px-8 py-3 font-label-caps text-label-caps hover:bg-surface-container-low transition-colors rounded-none">
+                    Próxima <span class="material-symbols-outlined align-middle ml-2 text-[18px]">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Calendar Grid -->
+<div class="bg-surface-container-lowest/90 backdrop-blur-sm border border-outline-variant shadow-sm rounded-none overflow-x-auto">
+<div class="min-w-[1000px]">
+<!-- Header Row (Days) -->
+<div class="grid grid-cols-8 border-b border-outline-variant bg-surface-container-low/50">
+<div class="p-4 border-r border-outline-variant flex items-center justify-center">
+<span class="material-symbols-outlined text-on-surface-variant">schedule</span>
+</div>
+<div class="p-4 text-center border-r border-outline-variant font-label-caps text-label-caps text-primary">SEG<br/><span class="text-secondary font-body-md text-[14px] font-normal">14</span></div>
+<div class="p-4 text-center border-r border-outline-variant font-label-caps text-label-caps text-primary bg-surface-container-highest/30">TER<br/><span class="text-secondary font-body-md text-[14px] font-normal">15</span></div>
+<div class="p-4 text-center border-r border-outline-variant font-label-caps text-label-caps text-primary">QUA<br/><span class="text-secondary font-body-md text-[14px] font-normal">16</span></div>
+<div class="p-4 text-center border-r border-outline-variant font-label-caps text-label-caps text-primary">QUI<br/><span class="text-secondary font-body-md text-[14px] font-normal">17</span></div>
+<div class="p-4 text-center border-r border-outline-variant font-label-caps text-label-caps text-primary">SEX<br/><span class="text-secondary font-body-md text-[14px] font-normal">18</span></div>
+<div class="p-4 text-center border-r border-outline-variant font-label-caps text-label-caps text-primary">SÁB<br/><span class="text-secondary font-body-md text-[14px] font-normal">19</span></div>
+<div class="p-4 text-center font-label-caps text-label-caps text-primary">DOM<br/><span class="text-secondary font-body-md text-[14px] font-normal">20</span></div>
+</div>
+<!-- Time Rows -->
+<!-- Café -->
+<div class="grid grid-cols-8 border-b border-outline-variant group">
+<div class="p-4 border-r border-outline-variant flex items-center justify-center font-label-caps text-label-caps text-secondary bg-surface-container-low/50">CAFÉ</div>
+<div class="p-2 border-r border-outline-variant relative min-h-[120px] hover:bg-surface-container-highest/20 transition-colors cursor-pointer">
+<!-- Empty Slot -->
+<div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-outline-variant">add</span>
+</div>
+</div>
+<div class="p-2 border-r border-outline-variant bg-surface-container-highest/30 relative min-h-[120px]">
+<!-- Meal Card -->
+<div class="bg-surface-container-lowest border border-outline-variant p-3 h-full flex flex-col justify-between hover:shadow-md transition-shadow">
+<div>
+<p class="font-label-caps text-[10px] text-secondary mb-1">RÁPIDO</p>
+<p class="font-headline-sm-mobile text-headline-sm-mobile text-primary leading-tight">Torrada com Abacate</p>
+</div>
+<div class="flex items-center text-secondary text-[12px] mt-2">
+<span class="material-symbols-outlined text-[14px] mr-1">timer</span> 10m
+                            </div>
+</div>
+</div>
+<div class="p-2 border-r border-outline-variant relative min-h-[120px]"></div>
+<div class="p-2 border-r border-outline-variant relative min-h-[120px]"></div>
+<div class="p-2 border-r border-outline-variant relative min-h-[120px]"></div>
+<div class="p-2 border-r border-outline-variant relative min-h-[120px]">
+<div class="bg-surface-container-lowest border border-outline-variant p-3 h-full flex flex-col justify-between hover:shadow-md transition-shadow">
+<div>
+<p class="font-label-caps text-[10px] text-secondary mb-1">ESPECIAL</p>
+<p class="font-headline-sm-mobile text-headline-sm-mobile text-primary leading-tight">Panquecas Clássicas</p>
+</div>
+<div class="flex items-center text-secondary text-[12px] mt-2">
+<span class="material-symbols-outlined text-[14px] mr-1">timer</span> 30m
+                            </div>
+</div>
+</div>
+<div class="p-2 relative min-h-[120px]"></div>
+</div>
+<!-- Almoço -->
+<div class="grid grid-cols-8 border-b border-outline-variant group">
+<div class="p-4 border-r border-outline-variant flex items-center justify-center font-label-caps text-label-caps text-secondary bg-surface-container-low/50">ALMOÇO</div>
+<div class="p-2 border-r border-outline-variant relative min-h-[160px]">
+<div class="bg-surface-container-lowest border border-outline-variant p-3 h-full flex flex-col hover:shadow-md transition-shadow">
+<div class="h-16 w-full bg-surface-container-highest mb-2" data-alt="A detailed close-up shot of a minimalist, high-end salad bowl featuring crisp greens, shaved radishes, and toasted seeds, set against a clean white marble countertop under bright, natural daylight. The aesthetic is clean, premium, and culinary-focused." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBE5-lgaVyS1hi7JhdAiqPaE0tCA-qPAo1cVRvcskJYR_1Rn6en7O9JNSbGLTlpRGMWdJIR7zJ5VVCyKmILbgbybQHhWPWjTPEYSQytxEmavNn1PPKWzIVSxczz1RHzp6ZgWtJK3MDAwZg-4_0TlFtyBiX2Yxh-itQwPxSybmcf3W4TzJVZmF5wD-FkUShSJP80DUbJHc6wMEPrxGGob8SsvK4qICMc1C3mCAWyDOo8w2hb6Isk3XKF')"></div>
+<p class="font-headline-sm-mobile text-headline-sm-mobile text-primary leading-tight flex-grow">Salada de Quinoa</p>
+</div>
+</div>
+<div class="p-2 border-r border-outline-variant bg-surface-container-highest/30 relative min-h-[160px]"></div>
+<div class="p-2 border-r border-outline-variant relative min-h-[160px]"></div>
+<div class="p-2 border-r border-outline-variant relative min-h-[160px]">
+<div class="bg-surface-container-lowest border border-outline-variant p-3 h-full flex flex-col hover:shadow-md transition-shadow">
+<p class="font-label-caps text-[10px] text-secondary mb-1">SOBRAS</p>
+<p class="font-headline-sm-mobile text-headline-sm-mobile text-primary leading-tight flex-grow">Risoto de Cogumelos</p>
+</div>
+</div>
+<div class="p-2 border-r border-outline-variant relative min-h-[160px]"></div>
+<div class="p-2 border-r border-outline-variant relative min-h-[160px]"></div>
+<div class="p-2 relative min-h-[160px]">
+<div class="bg-surface-container-lowest border border-outline-variant p-3 h-full flex flex-col hover:shadow-md transition-shadow">
+<div class="h-16 w-full bg-surface-container-highest mb-2" data-alt="A beautifully plated roasted vegetable medley with a light herb dressing, presented on a stark white artisanal ceramic plate resting on a concrete surface. The lighting is soft and diffused, emphasizing the natural textures of the food in a premium culinary setting." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBbg8nhZvmIOex5vs3-YiBwdiVx_bUp6y1GKg_vmQsx0-cjzs9O6ye9Np3okhH-I9SRmfKBSY5UCAP5LQGZYOvLirKTWwE5dmiwciaAkO89wrwg2-IOBfBWeng9f0YNj223-W2b_shUyYSEkWuq_eh4AvjjymknbPk1Aan_ZRBKIJsLAxrrEy7bBH3FXoyy8jfw1nY34ERXEtDugw4Un60WVYzP5vP1wiPYZQLGSecXN8csyRzaOEKr')"></div>
+<p class="font-headline-sm-mobile text-headline-sm-mobile text-primary leading-tight flex-grow">Legumes Assados</p>
+</div>
+</div>
+</div>
+<!-- Jantar -->
+<div class="grid grid-cols-8 group">
+<div class="p-4 border-r border-outline-variant flex items-center justify-center font-label-caps text-label-caps text-secondary bg-surface-container-low/50">JANTAR</div>
+<div class="p-2 border-r border-outline-variant relative min-h-[160px]"></div>
+<div class="p-2 border-r border-outline-variant bg-surface-container-highest/30 relative min-h-[160px]">
+<div class="bg-surface-container-lowest border border-outline-variant p-3 h-full flex flex-col hover:shadow-md transition-shadow border-l-4 border-l-primary">
+<p class="font-label-caps text-[10px] text-primary mb-1">HOJE</p>
+<p class="font-headline-sm-mobile text-headline-sm-mobile text-primary leading-tight flex-grow">Salmão Grelhado com Aspargos</p>
+<div class="flex justify-between items-center text-secondary text-[12px] mt-2">
+<span class="flex items-center"><span class="material-symbols-outlined text-[14px] mr-1">timer</span> 45m</span>
+<span class="material-symbols-outlined text-[16px] text-primary">restaurant</span>
+</div>
+</div>
+</div>
+<div class="p-2 border-r border-outline-variant relative min-h-[160px]"></div>
+<div class="p-2 border-r border-outline-variant relative min-h-[160px]"></div>
+<div class="p-2 border-r border-outline-variant relative min-h-[160px]"></div>
+<div class="p-2 border-r border-outline-variant relative min-h-[160px]">
+<div class="bg-surface-container-lowest border border-outline-variant p-3 h-full flex flex-col hover:shadow-md transition-shadow">
+<div class="h-16 w-full bg-surface-container-highest mb-2" data-alt="A steaming bowl of rich, dark ramen broth with perfectly arranged noodles, a soft-boiled egg, and fresh scallions, photographed from a high angle on a minimalist black slate table. The lighting is dramatic and moody, fitting for an elegant evening meal presentation." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDTwthw4MTumBrP5xPmM_gGvJXd6O9WB8VXThc6avkEkQMq-ulIkLVdALtzI9o1F7clDIByKTPvR5PiXuQr7I5P4611MqqWuznfzVOx3Q3sX3AR4VJDntdQrnO45E_nDfdjgsAPiyXOQEgJt1yQFguiZEmiuNzhJbgpQ3g7C2hM61HkEut0u4WrtGztZuSJha0FrFNQZ-M6wXBNtVEHSh67aR-s7UEI6gqVCou0El2Ahsuqu1KK-dLb')"></div>
+<p class="font-headline-sm-mobile text-headline-sm-mobile text-primary leading-tight flex-grow">Ramen Caseiro</p>
+</div>
+</div>
+<div class="p-2 relative min-h-[160px]"></div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full px-margin-desktop py-gutter flex justify-between items-center bg-transparent border-t border-outline-variant/20 font-label-caps text-label-caps text-on-surface-variant z-10 relative">
+<span class="font-headline-sm text-headline-sm text-on-surface-variant">© 2024 CULINARY. ALL RIGHTS RESERVED.</span>
+<div class="flex space-x-6">
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Sobre</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Privacidade</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Termos</a>
+</div>
+</footer>
+</body></html>

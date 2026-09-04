@@ -1,0 +1,65 @@
+- generic [active] [ref=f8e1]:
+  - generic [ref=f8e5]:
+    - banner [ref=f8e6]:
+      - generic [ref=f8e7]:
+        - link "CULINARY" [ref=f8e8] [cursor=pointer]:
+          - /url: /
+        - navigation [ref=f8e9]:
+          - link "RECEITAS" [ref=f8e10] [cursor=pointer]:
+            - /url: /
+          - link "PLANEJADOR" [ref=f8e11] [cursor=pointer]:
+            - /url: /planejador
+          - link "LISTA" [ref=f8e12] [cursor=pointer]:
+            - /url: /lista
+          - link "COZINHAR" [ref=f8e13] [cursor=pointer]:
+            - /url: /cozinhar
+        - generic [ref=f8e14]:
+          - button "Alterar nome do cozinheiro" [ref=f8e15]: Cozinheiro wesley
+          - generic "Buscar" [ref=f8e16] [cursor=pointer]: search
+    - main [ref=f8e17]:
+      - generic [ref=f8e18]:
+        - heading "A Arte da Culinária" [level=1] [ref=f8e19]
+        - paragraph [ref=f8e20]: Explore nossa coleção de receitas, criadas para transformar ingredientes simples em experiências gastronômicas inesquecíveis.
+      - generic [ref=f8e22]:
+        - generic [ref=f8e23]:
+          - generic [ref=f8e24]: Buscar receitas por título
+          - searchbox "Buscar receitas por título" [ref=f8e25]
+        - generic [ref=f8e26]:
+          - paragraph [ref=f8e28]:
+            - text: 6 de 85 receitas
+            - generic [ref=f8e29]: (79 restantes)
+          - generic [ref=f8e30]:
+            - link [ref=f8e31] [cursor=pointer]:
+              - /url: /receitas/pudim-de-coco-queimado
+              - img "Pudim de coco queimado" [ref=f8e33]
+              - heading "Pudim de coco queimado" [level=2] [ref=f8e35]
+            - generic [ref=f8e36]:
+              - img "Imagem pendente para Molho zabaglione" [ref=f8e38]:
+                - generic [aria-hidden] [ref=f8e39]: skillet
+                - generic [ref=f8e40]: Imagem em preparação
+              - heading "Molho zabaglione" [level=2] [ref=f8e42]
+            - generic [ref=f8e43]:
+              - img "Champanhita" [ref=f8e45]
+              - heading "Champanhita" [level=2] [ref=f8e47]
+            - generic [ref=f8e48]:
+              - img "Glacê para bolo" [ref=f8e50]
+              - heading "Glacê para bolo" [level=2] [ref=f8e52]
+            - generic [ref=f8e53]:
+              - img "Bolo Sarah" [ref=f8e55]
+              - heading "Bolo Sarah" [level=2] [ref=f8e57]
+            - generic [ref=f8e58]:
+              - img "Pão irlandês com pastel" [ref=f8e60]
+              - heading "Pão irlandês com pastel" [level=2] [ref=f8e62]
+          - button "Carregar mais" [ref=f8e64]
+    - contentinfo [ref=f8e65]:
+      - generic [ref=f8e66]:
+        - generic [ref=f8e67]: CULINARY
+        - navigation [ref=f8e68]:
+          - link "Sobre" [ref=f8e69] [cursor=pointer]:
+            - /url: "#"
+          - link "Privacidade" [ref=f8e70] [cursor=pointer]:
+            - /url: "#"
+          - link "Termos" [ref=f8e71] [cursor=pointer]:
+            - /url: "#"
+        - generic [ref=f8e72]: © 2024 CULINARY. ALL RIGHTS RESERVED.
+  - alert [ref=f8e73]

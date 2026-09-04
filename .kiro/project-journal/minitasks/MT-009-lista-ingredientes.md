@@ -1,0 +1,33 @@
+# MT-009 — Implementar tela de Lista de Ingredientes
+
+- **Status**: concluída
+- **Data/hora**: 2026-08-27 14:17 -03:00
+- **Objetivo**: Implementar a busca de receitas por ingredientes disponíveis (RF-030 a RF-034), fiel ao protótipo `lista_de_ingredientes_desktop` (layout 2 colunas: busca+lista à esquerda, resultados segmentados à direita).
+- **Contexto**: Layout base e dataset de receitas já disponíveis (MT-006/MT-007). Primeira tela desta fase com estado interativo real no cliente (as anteriores eram somente leitura de mocks).
+- **Arquivos criados**:
+  - `src/lib/ingredientes.ts` — lógica pura de matching: `calcularMatches` (normaliza texto — minúsculas, sem acento — e faz correspondência parcial entre ingredientes da receita e da despensa informada; calcula percentual disponível e ingredientes faltantes), `separarPorCompletude` (divide em completas/parciais).
+  - `src/lib/ingredientes.test.ts` — 7 testes (vazio quando sem ingredientes, match exato 100%, match parcial com lista de faltantes, exclusão de receitas sem nenhum ingrediente disponível, correspondência case/acento-insensitive, ordenação por percentual, separação completas/parciais).
+  - `src/components/busca-ingredientes.tsx` — client component (`"use client"`) com estado (`useState` para lista de ingredientes e input), input com Enter para adicionar, chips/lista removível, resultados divididos em "match exato" (grid de cards) e "match parcial" (lista com tags de itens faltantes).
+  - `src/components/busca-ingredientes.test.tsx` — 5 testes de interação real via `@testing-library/user-event` (render de ingredientes iniciais, match exato exibido, adicionar via Enter, remover via clique, rejeição de input vazio/só espaços).
+  - `src/app/lista/page.tsx` — página que compõe NavBar + BuscaIngredientes + Footer.
+- **Arquivos alterados**: `package.json` — adicionada devDependency `@testing-library/user-event`.
+- **Implementação realizada**: lógica de matching testada isoladamente (7 casos) antes de integrar ao componente interativo; componente testado com interação real de usuário (não apenas snapshot estático) antes de integrar à página.
+- **Decisões técnicas**:
+  - Estado inicial da busca usa `itensDespensaIniciais` (mock da MT-006) como ingredientes pré-carregados — reflete o protótipo, que já mostra "SEUS INGREDIENTES (4)" com itens preenchidos por padrão.
+  - Correspondência de texto parcial bidirecional (`includes` nos dois sentidos) para tolerar variações como "Ovos" (despensa) vs "3 unidades" não incluído, e nomes compostos como "Farinha de trigo tipo 00" (receita) vs "Farinha de Trigo" (despensa).
+  - Resultados parciais limitados a 10 itens (`.slice(0, 10)`) para não sobrecarregar a UI com receitas quase sem nenhum ingrediente em comum — decisão de UX razoável, reversível.
+- **Comandos executados**:
+  - `npx vitest run src/lib/ingredientes.test.ts` → 7 passed (validação isolada da lógica).
+  - `npm install --save-dev @testing-library/user-event` → sucesso.
+  - `npx vitest run src/components/busca-ingredientes.test.tsx` → 5 passed (validação isolada do componente).
+  - `npm run lint` → exit 0, sem findings.
+  - `npm test` → 29 passed (5 test files, incremento de 17 para 29).
+  - `npm run build` → exit 0, 4 rotas estáticas geradas (`/`, `/_not-found`, `/lista`, `/planejador`).
+  - `nohup npm run dev &` + `curl http://localhost:3000/lista` → HTTP 200, conteúdo confirmado ("O que tem na despensa?", "Ovos Mexidos Perfeitos" como match exato com a despensa padrão).
+- **Testes executados**: `src/lib/ingredientes.test.ts` (7 casos) + `src/components/busca-ingredientes.test.tsx` (5 casos) = 12 novos testes.
+- **Resultado**: sucesso.
+- **Evidências**: outputs de lint/test/build citados acima; HTML renderizado confirmado via curl.
+- **Pendências**:
+  - Rota `/receitas/[id]` ainda não implementada (mesma pendência já registrada na MT-007) — os links de `BuscaIngredientes` para receitas ainda resultam em 404 até essa rota existir.
+  - Layout mobile (RF-034: coluna única, chips no topo, seção "Faltam Poucos Itens" com contagem de receitas desbloqueadas) não implementado nesta minitask — mesmo padrão de decisão da MT-008 (fidelidade desktop primeiro).
+- **Próxima minitask**: MT-010 — Implementar tela Modo Cozinhar.

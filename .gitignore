@@ -1,0 +1,54 @@
+# Python (automation/)
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Node / Next.js (culinary-app/, quando inicializado)
+node_modules/
+.next/
+out/
+npm-debug.log*
+
+# Playwright
+culinary-app/e2e-results/
+culinary-app/playwright-report/
+culinary-app/test-results/
+
+# Sistema
+.DS_Store
+
+# Estado local da automacao (nao versionar execucoes; requirements.txt sim)
+automation/state/current_state.json
+automation/state/execution_history.jsonl
+.kiro/private-backups/
+
+# Dependências e builds
+node_modules/
+.next/
+dist/
+build/
+coverage/
+
+# Variáveis e segredos
+.env
+.env.*
+!.env.example
+
+# macOS
+.DS_Store
+._*
+__MACOSX/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Arquivos de auditoria visual e quarentena
+screenshots-auditoria/
+img/_nao_utilizar/
+
+# Metadados
+__MACOSX/
+.DS_Store
+._*

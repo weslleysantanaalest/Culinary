@@ -1,0 +1,86 @@
+Ordem,ID,Receita,Slug,Caminho,Hash,Status,Motivo,Utilizada
+1,8,Pudim de coco queimado,pudim-de-coco-queimado,img/001-pudim-de-coco-queimado.webp,5b981a21b1b5dcf38c20c4b4ea72208d1410ddc9c63651d73c75b48011c02ee9,APROVADA,Coco tostado e calda confirmados na receita real.,sim
+2,30,Molho zabaglione,molho-zabaglione,,,REJEITADA,Molho zabaglione: guarnição (hortelã + pó de especiaria) não confirmada nos ingredientes (parcialmente ilegíveis).,nao
+3,5,Champanhita,champanhita,img/003-champanhita.webp,73b106864f6fad63ea818ce8c7b1e807477e9ce9799d8dc0535a320782c9f8f3,APROVADA,"Imagem nova gerada no Notion (2026-09-03): doce montado em camadas de bolacha champanhe + creme em pirex, coberto com chantilly e coco. Compatível com a receita real.",sim
+4,81,Glacê para bolo,glace-para-bolo,img/004-glace-para-bolo.webp,6ec9254872f9889c71e7ad65840c0381c66d2c8498886cf89cbed1fca6a9e398,APROVADA,"Imagem nova gerada no Notion (2026-09-03): glacê de cor marrom-chocolate brilhante, compatível com chocolate em pó confirmado.",sim
+5,11,Bolo Sarah,bolo-sarah,img/005-bolo-sarah.webp,0175060105629999e19bec85f368eeaa808c65cb75f479be8198c227d63d2b47,APROVADA,"Imagem nova gerada no Notion (2026-09-03): bolo em 3 camadas com recheio de caramelo claro, sem chocolate. Compatível com a receita real.",sim
+6,24,Pão irlandês com pastel,pao-irlandes-com-pastel,img/006-pao-irlandes-com-pastel.webp,a198b86ede053dc0284e2350ae1d3447ae5de744fd6f3b64a501592a4221856c,APROVADA,"Imagem nova gerada no Notion (2026-09-03): fatia mostrando espiral de rocambole, exatamente o formato exigido.",sim
+7,40,Pudim Francês,pudim-frances,img/007-pudim-frances.webp,4fb01680f395018522a75cc5c6279906e8299d820f252c1762cc172dd6ea0dd6,APROVADA,"Imagem nova gerada no Notion (2026-09-03): queijo ralado visível, pudim denso/dourado compatível com pudim de queijo assado.",sim
+8,60,Torta antiga,torta-antiga,,,REJEITADA,Torta antiga (ambas versões): massa treliçada incompatível com bolo denso de chocolate/amêndoas em camadas coberto de nata.,nao
+9,35,Pudim de ameixas e claras (Sugi),pudim-de-ameixas-e-claras-sugi,img/009-pudim-de-ameixas-e-claras-sugi.webp,422f965724aa41cc4784355370c967c059e0cf6a42630f646a1424134851cc2a,APROVADA,"Imagem nova gerada no Notion (2026-09-03): cor rosa-arroxeada de ameixa, textura aerada, compatível com ameixas+claras confirmadas.",sim
+10,56,Bolo de fubá (Clarice),bolo-de-fuba-clarice,img/010-bolo-de-fuba-clarice.webp,3a2d7a95cb18195ca980d5a27e3e6e2f17a6af1b7ab8e53da8968c5ab3167d85,APROVADA,"Cobertura tostada/marrom compatível com 'fubá queimado' da receita real (versão duplicadas/, não a versão restante/ com açúcar branco).",sim
+11,75,Gelatina com salada de frutas,gelatina-com-salada-de-frutas,img/011-gelatina-com-salada-de-frutas.webp,6c6bfdbe5dcf4241325e4da9b0b7d5eb48034ec2be87417f8d997b2449dbd26a,APROVADA,Imagem nova gerada no Notion (2026-09-03): gelatina vermelha transparente com frutas variadas confirmadas visíveis.,sim
+12,46,Waffles de chocolate,waffles-de-chocolate,,,REJEITADA,"Waffles de chocolate: apresentados como waffles individuais com chantilly, não como pilha recheada e gelada.",nao
+13,23,Bolo de ameixas,bolo-de-ameixas,img/013-bolo-de-ameixas.webp,0e8d9feed0326a6c83b4f9056583e24e47b66a9a58206ec25207317a1d3e3aec,APROVADA,Ameixas visíveis e confirmadas como ingrediente.,sim
+14,26,Bolachinhas Quaker,bolachinhas-quaker,img/014-bolachinhas-quaker.webp,5a72f919ab957b39f109d59f3a0e4b9c43fb5e9fb7b2c4de5fa0ede5a4ff744d,APROVADA,Textura de aveia compatível com ingrediente Aveia Quaker confirmado.,sim
+15,65,Bolo de mel e cacau (título atribuído pelo conteúdo),bolo-de-mel-e-cacau-titulo-atribuido-pelo-conteudo,,,REJEITADA,Bolo de mel e cacau: nozes/amêndoas decorativas no topo não confirmadas.,nao
+16,52,Sequilho de fubá,sequilho-de-fuba,img/016-sequilho-de-fuba.webp,53a41e839c7dfd438d1d05953d95f41b80fec02fd0dec95107ef9ae982f070a5,APROVADA,Massa simples de fubá/araruta compatível.,sim
+17,43,Torta de Natal australiana,torta-de-natal-australiana,,,REJEITADA,"Torta de Natal australiana: formato individual fechado tipo mince pie, não bolo assado inteiro com glacê.",nao
+18,73,Torta chiffon de limão,torta-chiffon-de-limao,,,REJEITADA,"Torta chiffon de limão: aparência de cheesecake denso, não recheio leve e aerado (chiffon).",nao
+19,49,Chocolate chiffon pie,chocolate-chiffon-pie,,,REJEITADA,"Chocolate chiffon pie: recheio bege claro, não claramente marrom-chocolate como exigido.",nao
+20,17,Torta de maçã (Ligia),torta-de-maca-ligia,,,SEM_IMAGEM,Nenhuma imagem gerada ainda para esta receita.,nao
+21,18,Bolo inglês,bolo-ingles,,,SEM_IMAGEM,Nenhuma imagem gerada ainda para esta receita.,nao
+22,38,Bolinha de queijo,bolinha-de-queijo,,,SEM_IMAGEM,Nenhuma imagem gerada ainda para esta receita.,nao
+23,28,Manjar branco,manjar-branco,,,SEM_IMAGEM,Nenhuma imagem gerada ainda para esta receita.,nao
+24,4,Bolachinhas com geleia ou mel,bolachinhas-com-geleia-ou-mel,,,SEM_IMAGEM,Nenhuma imagem gerada ainda para esta receita.,nao
+25,48,Bolachinhas (Ivo Murilo),bolachinhas-ivo-murilo,,,SEM_IMAGEM,Nenhuma imagem gerada ainda para esta receita.,nao
+26,34,Sequilhos (Rachel),sequilhos-rachel,,,SEM_IMAGEM,Nenhuma imagem gerada ainda para esta receita.,nao
+27,57,Bolacha (José Carlos),bolacha-jose-carlos,,,SEM_IMAGEM,Nenhuma imagem gerada ainda para esta receita.,nao
+28,19,Biscoito de geladeira,biscoito-de-geladeira,,,SEM_IMAGEM,Nenhuma imagem gerada ainda para esta receita.,nao
+29,31,Biscoitinhos,biscoitinhos,,,SEM_IMAGEM,Nenhuma imagem gerada ainda para esta receita.,nao
+30,33,Pie shell,pie-shell,,,SEM_IMAGEM,Nenhuma imagem gerada ainda para esta receita.,nao
+31,9,Pudim de castanhas,pudim-de-castanhas,,,SEM_IMAGEM,Nenhuma imagem gerada ainda para esta receita.,nao
+32,29,Sorvete base,sorvete-base,,,SEM_IMAGEM,Nenhuma imagem gerada ainda para esta receita.,nao
+33,83,Creme de queijo,creme-de-queijo,,,SEM_IMAGEM,Nenhuma imagem gerada ainda para esta receita.,nao
+34,44,Creme de laranja,creme-de-laranja,,,SEM_IMAGEM,Nenhuma imagem gerada ainda para esta receita.,nao
+35,66,Bolo de fubá (Yone),bolo-de-fuba-yone,,,SEM_IMAGEM,Nenhuma imagem gerada ainda para esta receita.,nao
+36,78,Espuma mousse de chocolate (Yone),espuma-mousse-de-chocolate-yone,,,SEM_IMAGEM,Nenhuma imagem gerada ainda para esta receita.,nao
+37,59,Doce de damasco,doce-de-damasco,,,SEM_IMAGEM,Nenhuma imagem gerada ainda para esta receita.,nao
+38,74,Massa para tortas,massa-para-tortas,,,SEM_IMAGEM,Nenhuma imagem gerada ainda para esta receita.,nao
+39,64,Recheio de limão,recheio-de-limao,,,SEM_IMAGEM,Nenhuma imagem gerada ainda para esta receita.,nao
+40,42,Doce de batata (Sofia Coutinho),doce-de-batata-sofia-coutinho,,,SEM_IMAGEM,Nenhuma imagem gerada ainda para esta receita.,nao
+41,37,Rosca (Elisa),rosca-elisa,,,SEM_IMAGEM,Nenhuma imagem gerada ainda para esta receita.,nao
+42,27,Suflê de chocolate (Sugi),sufle-de-chocolate-sugi,,,SEM_IMAGEM,Nenhuma imagem gerada ainda para esta receita.,nao
+43,1,Bolo de farinha de milho,bolo-de-farinha-de-milho,,,SEM_IMAGEM,Nenhuma imagem gerada ainda para esta receita.,nao
+44,53,Bolo A,bolo-a,,,SEM_IMAGEM,Nenhuma imagem gerada ainda para esta receita.,nao
+45,10,Bolo da Lila,bolo-da-lila,,,SEM_IMAGEM,Nenhuma imagem gerada ainda para esta receita.,nao
+46,41,Rosca coroa (Leis),rosca-coroa-leis,,,SEM_IMAGEM,Nenhuma imagem gerada ainda para esta receita.,nao
+47,76,Puchero,puchero,,,SEM_IMAGEM,Nenhuma imagem gerada ainda para esta receita.,nao
+48,21,Molho de tomates,molho-de-tomates,,,SEM_IMAGEM,Nenhuma imagem gerada ainda para esta receita.,nao
+49,67,Filé-mignon à la crème,file-mignon-a-la-creme,,,SEM_IMAGEM,Nenhuma imagem gerada ainda para esta receita.,nao
+50,69,Molho de creme,molho-de-creme,,,SEM_IMAGEM,Nenhuma imagem gerada ainda para esta receita.,nao
+51,50,Lasanha de frango,lasanha-de-frango,,,SEM_IMAGEM,Nenhuma imagem gerada ainda para esta receita.,nao
+52,82,Creme de chocolate e frutas,creme-de-chocolate-e-frutas,,,SEM_IMAGEM,Nenhuma imagem gerada ainda para esta receita.,nao
+53,58,Crêpe Suzette,crepe-suzette,,,SEM_IMAGEM,Nenhuma imagem gerada ainda para esta receita.,nao
+54,70,Caramelo,caramelo,,,SEM_IMAGEM,Nenhuma imagem gerada ainda para esta receita.,nao
+55,79,Gelado de chocolate,gelado-de-chocolate,,,SEM_IMAGEM,Nenhuma imagem gerada ainda para esta receita.,nao
+56,85,Gelado de morangos,gelado-de-morangos,,,SEM_IMAGEM,Nenhuma imagem gerada ainda para esta receita.,nao
+57,80,Marron glacé,marron-glace,,,SEM_IMAGEM,Nenhuma imagem gerada ainda para esta receita.,nao
+58,7,Parfait exotique,parfait-exotique,,,SEM_IMAGEM,Nenhuma imagem gerada ainda para esta receita.,nao
+59,51,Charlotte de chocolate,charlotte-de-chocolate,,,SEM_IMAGEM,Nenhuma imagem gerada ainda para esta receita.,nao
+60,3,Pudim de coco,pudim-de-coco,,,SEM_IMAGEM,Nenhuma imagem gerada ainda para esta receita.,nao
+61,68,Creme de laranja (mamãe),creme-de-laranja-mamae,,,SEM_IMAGEM,Nenhuma imagem gerada ainda para esta receita.,nao
+62,54,Bala (M. Gilda),bala-m-gilda,,,SEM_IMAGEM,Nenhuma imagem gerada ainda para esta receita.,nao
+63,12,Rosquinha econômica,rosquinha-economica,,,SEM_IMAGEM,Nenhuma imagem gerada ainda para esta receita.,nao
+64,22,Torta de abacaxi (Tia Vag),torta-de-abacaxi-tia-vag,,,SEM_IMAGEM,Nenhuma imagem gerada ainda para esta receita.,nao
+65,63,Pudim de pão,pudim-de-pao,,,SEM_IMAGEM,Nenhuma imagem gerada ainda para esta receita.,nao
+66,25,Bolo de mandioca (receita datilografada),bolo-de-mandioca-receita-datilografada,,,SEM_IMAGEM,Nenhuma imagem gerada ainda para esta receita.,nao
+67,36,Banana cake,banana-cake,,,SEM_IMAGEM,Nenhuma imagem gerada ainda para esta receita.,nao
+68,61,Rocambole de frutas com chantilly,rocambole-de-frutas-com-chantilly,,,SEM_IMAGEM,Nenhuma imagem gerada ainda para esta receita.,nao
+69,84,Pavê delicioso,pave-delicioso,,,SEM_IMAGEM,Nenhuma imagem gerada ainda para esta receita.,nao
+70,47,Fudge de castanha-do-pará,fudge-de-castanha-do-para,,,SEM_IMAGEM,Nenhuma imagem gerada ainda para esta receita.,nao
+71,6,Pão de ló americano,pao-de-lo-americano,,,SEM_IMAGEM,Nenhuma imagem gerada ainda para esta receita.,nao
+72,16,Bolo de Natal,bolo-de-natal,,,SEM_IMAGEM,Nenhuma imagem gerada ainda para esta receita.,nao
+73,15,Bolo de laranja,bolo-de-laranja,,,SEM_IMAGEM,Nenhuma imagem gerada ainda para esta receita.,nao
+74,62,Fatias de Pão João (Belinha),fatias-de-pao-joao-belinha,,,SEM_IMAGEM,Nenhuma imagem gerada ainda para esta receita.,nao
+75,2,Balas de coco,balas-de-coco,,,SEM_IMAGEM,Nenhuma imagem gerada ainda para esta receita.,nao
+76,77,Cocada de leite condensado,cocada-de-leite-condensado,,,SEM_IMAGEM,Nenhuma imagem gerada ainda para esta receita.,nao
+77,14,Pão de mel,pao-de-mel,,,SEM_IMAGEM,Nenhuma imagem gerada ainda para esta receita.,nao
+78,13,Bolo de Nescau (Joana),bolo-de-nescau-joana,,,SEM_IMAGEM,Nenhuma imagem gerada ainda para esta receita.,nao
+79,32,Biscoito de areia,biscoito-de-areia,,,SEM_IMAGEM,Nenhuma imagem gerada ainda para esta receita.,nao
+80,45,Cuca (mamãe),cuca-mamae,,,SEM_IMAGEM,Nenhuma imagem gerada ainda para esta receita.,nao
+81,39,Bolachinha de castanha-do-pará,bolachinha-de-castanha-do-para,,,SEM_IMAGEM,Nenhuma imagem gerada ainda para esta receita.,nao
+82,72,Fudge de geladeira,fudge-de-geladeira,,,SEM_IMAGEM,Nenhuma imagem gerada ainda para esta receita.,nao
+83,71,Aperitivo (Mr. Dave),aperitivo-mr-dave,,,SEM_IMAGEM,Nenhuma imagem gerada ainda para esta receita.,nao
+84,55,Torta de maçã (Vila),torta-de-maca-vila,,,SEM_IMAGEM,Nenhuma imagem gerada ainda para esta receita.,nao
+85,20,Torta assombrosa (Lucia Poteller),torta-assombrosa-lucia-poteller,,,SEM_IMAGEM,Nenhuma imagem gerada ainda para esta receita.,nao

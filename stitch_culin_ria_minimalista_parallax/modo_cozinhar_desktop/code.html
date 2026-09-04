@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Culinary - Cooking Mode</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&amp;family=Manrope:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-highest": "#e5e2e1",
+                        "surface-container-low": "#f7f3f2",
+                        "primary-container": "#262626",
+                        "surface-container-lowest": "#ffffff",
+                        "inverse-surface": "#313030",
+                        "secondary-fixed-dim": "#c7c6c6",
+                        "on-background": "#1c1b1b",
+                        "outline-variant": "#c4c7c7",
+                        "on-tertiary-container": "#918d8b",
+                        "on-primary": "#ffffff",
+                        "on-primary-container": "#8e8d8c",
+                        "surface-tint": "#5f5e5e",
+                        "tertiary": "#131111",
+                        "surface-variant": "#e5e2e1",
+                        "on-error": "#ffffff",
+                        "surface-container": "#f1edec",
+                        "inverse-primary": "#c8c6c5",
+                        "on-primary-fixed-variant": "#474746",
+                        "on-secondary-fixed": "#1b1c1c",
+                        "on-primary-fixed": "#1b1c1c",
+                        "on-surface": "#1c1b1b",
+                        "background": "#fdf8f8",
+                        "on-tertiary-fixed-variant": "#494645",
+                        "tertiary-container": "#282625",
+                        "on-error-container": "#93000a",
+                        "on-surface-variant": "#444748",
+                        "outline": "#747878",
+                        "primary-fixed-dim": "#c8c6c5",
+                        "on-tertiary-fixed": "#1d1b1a",
+                        "on-secondary-fixed-variant": "#464747",
+                        "secondary": "#5e5e5e",
+                        "surface": "#fdf8f8",
+                        "primary-fixed": "#e4e2e1",
+                        "surface-dim": "#ddd9d8",
+                        "surface-bright": "#fdf8f8",
+                        "tertiary-fixed": "#e7e1df",
+                        "secondary-fixed": "#e3e2e2",
+                        "inverse-on-surface": "#f4f0ef",
+                        "on-secondary-container": "#646464",
+                        "tertiary-fixed-dim": "#cac5c4",
+                        "on-secondary": "#ffffff",
+                        "secondary-container": "#e3e2e2",
+                        "surface-container-high": "#ebe7e7",
+                        "error": "#ba1a1a",
+                        "primary": "#111111",
+                        "error-container": "#ffdad6",
+                        "on-tertiary": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "margin-desktop": "48px",
+                        "margin-mobile": "16px",
+                        "unit": "8px",
+                        "container-max": "1200px",
+                        "section-gap": "80px"
+                    },
+                    "fontFamily": {
+                        "label-caps": ["Manrope"],
+                        "body-lg": ["Manrope"],
+                        "headline-sm-mobile": ["EB Garamond"],
+                        "headline-lg": ["EB Garamond"],
+                        "display-lg": ["EB Garamond"],
+                        "body-md": ["Manrope"],
+                        "headline-xl": ["EB Garamond"]
+                    },
+                    "fontSize": {
+                        "label-caps": ["12px", { "lineHeight": "1.0", "letterSpacing": "0.15em", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-sm-mobile": ["24px", { "lineHeight": "1.3", "fontWeight": "500" }],
+                        "headline-lg": ["32px", { "lineHeight": "1.3", "fontWeight": "500" }],
+                        "display-lg": ["64px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-xl": ["48px", { "lineHeight": "1.2", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        /* Custom styles for checkboxes to match premium minimalist aesthetic */
+        .premium-checkbox {
+            appearance: none;
+            width: 16px;
+            height: 16px;
+            border: 1px solid #c4c7c7; /* outline-variant */
+            background-color: transparent;
+            cursor: pointer;
+            position: relative;
+            border-radius: 0;
+            transition: all 0.2s ease;
+        }
+        .premium-checkbox:checked {
+            background-color: #262626; /* primary-container */
+            border-color: #262626;
+        }
+        .premium-checkbox:checked::after {
+            content: '';
+            position: absolute;
+            left: 4px;
+            top: 0px;
+            width: 5px;
+            height: 10px;
+            border: solid white;
+            border-width: 0 1.5px 1.5px 0;
+            transform: rotate(45deg);
+        }
+        .ingredient-item.checked {
+            color: #5e5e5e; /* secondary */
+            text-decoration: line-through;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface antialiased min-h-screen flex flex-col relative font-body-md">
+<!-- Background Image -->
+<div class="fixed inset-0 z-0 bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida/AEtjO1WJ8fv3QB5XbGDi9OHwypivs7_S8Orsiy3QiPP9Dd21S14xDJyrQ5Vl3IdIK3eD1VwMtGaNkXPbCC1w4AH1120PevrXvRVvb7VvtWDnWm5IMT_z1xBAtjiRzExg6VBwakejx7NWxU53I3CywJ3qgNBrZK8nGJKqKb4Emp-q6eQeszqfkKBj56Zjg_ogwlmkj0le6RPVZb7rz9O0nVbwyftrJYgfRnkwpHlH7gKe_jPg-a-LDrsU9KyhktE');"></div>
+<!-- Subtle overlay to ensure readability while maintaining the 'floating' effect -->
+<div class="fixed inset-0 z-0 bg-surface/40 backdrop-blur-sm"></div>
+<!-- TopNavBar -->
+<header class="sticky top-0 z-50 w-full bg-surface/80 dark:bg-surface-container-lowest/80 backdrop-blur-md border-b border-outline-variant/30">
+<div class="flex justify-between items-center w-full px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="font-headline-lg text-headline-lg tracking-tighter text-primary dark:text-on-primary-fixed">
+                CULINARY
+            </div>
+<!-- Navigation -->
+<nav class="hidden md:flex gap-gutter items-center">
+<a class="font-label-caps text-label-caps text-secondary dark:text-on-secondary-container hover:text-primary dark:hover:text-on-primary-fixed transition-colors duration-300" href="#">RECEITAS</a>
+<a class="font-label-caps text-label-caps text-secondary dark:text-on-secondary-container hover:text-primary dark:hover:text-on-primary-fixed transition-colors duration-300" href="#">PLANEJADOR</a>
+<a class="font-label-caps text-label-caps text-secondary dark:text-on-secondary-container hover:text-primary dark:hover:text-on-primary-fixed transition-colors duration-300" href="#">LISTA</a>
+<a class="font-label-caps text-label-caps text-primary dark:text-on-primary-fixed border-b-2 border-primary dark:border-on-primary-fixed pb-1 opacity-70 transition-opacity" href="#">COZINHAR</a>
+</nav>
+<div class="flex gap-4 items-center text-primary dark:text-on-primary-fixed">
+<button class="hover:text-secondary transition-colors">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+</button>
+<button class="hover:text-secondary transition-colors">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+</button>
+<button class="hover:text-secondary transition-colors">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Main Content Area -->
+<main class="relative z-10 flex-grow w-full max-w-container-max mx-auto px-margin-desktop py-section-gap">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-start">
+<!-- Sidebar: Ingredient Checklist -->
+<aside class="md:col-span-4 bg-surface-container-lowest/95 backdrop-blur-md border border-outline-variant/50 p-[32px] sticky top-[100px]">
+<h2 class="font-headline-sm-mobile text-headline-sm-mobile mb-6 border-b border-outline-variant/30 pb-4">Ingredientes</h2>
+<ul class="flex flex-col">
+<li class="py-4 border-b border-outline-variant/30 flex items-start gap-4">
+<input class="premium-checkbox mt-1" id="ing-1" onchange="toggleIngredient(this)" type="checkbox"/>
+<label class="font-body-md text-body-md cursor-pointer ingredient-item select-none" for="ing-1">
+                            2 xícaras de farinha de trigo tipo 00
+                        </label>
+</li>
+<li class="py-4 border-b border-outline-variant/30 flex items-start gap-4">
+<input class="premium-checkbox mt-1" id="ing-2" onchange="toggleIngredient(this)" type="checkbox"/>
+<label class="font-body-md text-body-md cursor-pointer ingredient-item select-none" for="ing-2">
+                            3 ovos caipiras grandes (temperatura ambiente)
+                        </label>
+</li>
+<li class="py-4 border-b border-outline-variant/30 flex items-start gap-4">
+<input class="premium-checkbox mt-1" id="ing-3" onchange="toggleIngredient(this)" type="checkbox"/>
+<label class="font-body-md text-body-md cursor-pointer ingredient-item select-none" for="ing-3">
+                            1 colher de chá de sal marinho fino
+                        </label>
+</li>
+<li class="py-4 border-b border-outline-variant/30 flex items-start gap-4">
+<input class="premium-checkbox mt-1" id="ing-4" onchange="toggleIngredient(this)" type="checkbox"/>
+<label class="font-body-md text-body-md cursor-pointer ingredient-item select-none" for="ing-4">
+                            1 colher de sopa de azeite de oliva extravirgem
+                        </label>
+</li>
+<li class="py-4 flex items-start gap-4">
+<input class="premium-checkbox mt-1" id="ing-5" onchange="toggleIngredient(this)" type="checkbox"/>
+<label class="font-body-md text-body-md cursor-pointer ingredient-item select-none" for="ing-5">
+                            Farinha de semolina para polvilhar
+                        </label>
+</li>
+</ul>
+</aside>
+<!-- Main Recipe Card (Cooking Mode) -->
+<section class="md:col-span-8 bg-surface-container-lowest/95 backdrop-blur-md border border-outline-variant/50 p-[48px] flex flex-col min-h-[600px]">
+<header class="mb-10 flex justify-between items-end border-b border-outline-variant/30 pb-6">
+<div>
+<div class="flex gap-2 mb-4">
+<span class="bg-surface-container-low text-on-secondary-container px-3 py-1 font-label-caps text-label-caps">PASSO 3 DE 8</span>
+</div>
+<h1 class="font-display-lg text-display-lg text-on-surface">Massa Fresca Clássica</h1>
+</div>
+<div class="text-right flex flex-col items-end">
+<span class="font-label-caps text-label-caps text-secondary mb-1">TEMPO ATIVO</span>
+<span class="font-headline-lg text-headline-lg">15 MIN</span>
+</div>
+</header>
+<div class="flex-grow flex flex-col justify-center max-w-[80%] mx-auto py-8">
+<p class="font-body-lg text-body-lg text-on-surface text-center leading-relaxed">
+                        Faça um buraco no centro da farinha. Adicione os ovos, o azeite e o sal no buraco. Usando um garfo, bata delicadamente os ovos, incorporando lentamente a farinha das bordas até que a massa comece a se formar.
+                    </p>
+</div>
+<footer class="mt-auto pt-10 flex flex-col sm:flex-row justify-center gap-6 items-center">
+<button class="bg-transparent border border-primary-container text-primary-container rounded-none px-[40px] py-[20px] font-label-caps text-label-caps hover:bg-surface-container-low transition-colors w-full sm:w-auto flex items-center justify-center gap-3">
+<span class="material-symbols-outlined" data-icon="timer">timer</span>
+                        INICIAR TIMER
+                    </button>
+<button class="bg-primary-container text-on-primary rounded-none px-[40px] py-[20px] font-label-caps text-label-caps hover:bg-inverse-surface transition-colors w-full sm:w-auto flex items-center justify-center gap-3">
+<span class="material-symbols-outlined" data-icon="volume_up">volume_up</span>
+                        OUVIR PASSO
+                    </button>
+</footer>
+<!-- Step Navigation Indicators -->
+<div class="flex justify-center gap-3 mt-12">
+<div class="w-12 h-1 bg-outline-variant/30"></div>
+<div class="w-12 h-1 bg-outline-variant/30"></div>
+<div class="w-12 h-1 bg-primary-container"></div>
+<div class="w-12 h-1 bg-outline-variant/30"></div>
+<div class="w-12 h-1 bg-outline-variant/30"></div>
+<div class="w-12 h-1 bg-outline-variant/30"></div>
+<div class="w-12 h-1 bg-outline-variant/30"></div>
+<div class="w-12 h-1 bg-outline-variant/30"></div>
+</div>
+</section>
+</div>
+</main>
+<!-- Footer -->
+<footer class="relative z-10 w-full bg-surface-container-lowest/90 backdrop-blur-sm border-t border-outline-variant/20">
+<div class="w-full px-margin-desktop py-gutter flex justify-between items-center max-w-container-max mx-auto">
+<div class="font-headline-sm text-headline-sm text-on-surface-variant">
+                CULINARY
+            </div>
+<div class="font-label-caps text-label-caps text-on-surface-variant flex gap-6">
+<a class="hover:text-primary transition-colors" href="#">Sobre</a>
+<a class="hover:text-primary transition-colors" href="#">Privacidade</a>
+<a class="hover:text-primary transition-colors" href="#">Termos</a>
+</div>
+<div class="font-label-caps text-label-caps text-on-surface-variant">
+                © 2024 CULINARY. ALL RIGHTS RESERVED.
+            </div>
+</div>
+</footer>
+<script>
+        function toggleIngredient(checkbox) {
+            const label = checkbox.nextElementSibling;
+            if (checkbox.checked) {
+                label.classList.add('checked');
+            } else {
+                label.classList.remove('checked');
+            }
+        }
+    </script>
+</body></html>
